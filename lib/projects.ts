@@ -22,133 +22,124 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     slug: "empower",
     title: "Empower",
-    subtitle: "Design Systems & UI for a Large-Scale Financial Platform",
+    subtitle: "Design System at Scale",
     year: "2024 — now",
     image: "/images/projects/empower.png",
-    overview: "Designed and scaled a unified design system and core product UI for Empower — a large-scale financial platform providing tools for personal finance, retirement planning, and wealth management for both individual users and enterprise retirement plans.",
-    context: "Empower operated a legacy corporate website and core financial application supported by an outdated UI kit that lacked consistency, scalability, and clear system rules.",
+    overview: "I led the design and scaling of a unified design system that became the foundational UI infrastructure for Empower's large-scale financial platform. The system supported multiple product teams and complex financial workflows, enabling consistent user experiences and significantly improving design–engineering efficiency across the organization.",
+    context: "Empower is a large-scale financial platform with multiple products evolving in parallel. Prior to this initiative, teams worked with fragmented UI patterns, inconsistent components, and ad-hoc design decisions. As the platform scaled, these inconsistencies increasingly slowed development, created UX debt, and introduced risk into core financial flows.",
     role: "Senior UX/UI Designer",
     ownership: [
-      "End-to-end design system architecture (components, tokens, patterns)",
-      "Data-dense UI components (tables, dashboards, charts, complex layouts)",
-      "Navigation structure and interaction models",
-      "High-fidelity design and responsive layouts (desktop, tablet, mobile)",
-      "Design quality, consistency, and scalability across products",
-      "Design-to-development handoff and implementation alignment",
-      "Design guidelines and system adoption across teams"
+      "Defined system architecture, interaction principles, and visual foundations",
+      "Designed and maintained tokens, components, and responsive patterns",
+      "Established governance processes and contribution guidelines",
+      "Led internal reviews and alignment with design and engineering teams",
+      "Ensured system adoption across products and teams"
     ],
     collaboration: [
-      "Product Managers (strategy alignment, feature prioritization, business impact measurement)",
-      "Frontend Engineers (component architecture, implementation patterns, technical feasibility)",
-      "Design peers (design reviews, system governance, mentorship of junior designers)",
-      "Design System Council (established governance process with senior designers)",
-      "Product Teams (adoption support, training sessions for designers across multiple product areas)"
+      "Product Managers — strategy alignment, feature prioritization, business impact",
+      "Frontend Engineers — component architecture, implementation patterns, technical feasibility",
+      "Design System Council — governance process and system evolution",
+      "Product Teams — adoption support and training across multiple product areas"
     ],
-    problem: "When I joined the team, the product relied on an outdated UI and a fragmented UI kit that did not scale well across teams or platforms. This created friction in the design-to-development workflow, inconsistent user experiences, and slowed feature delivery.",
+    problem: "As the platform scaled, several systemic issues emerged: no shared design system across products leading to duplicated work, inconsistent component behavior and visual drift between teams, high friction between design and engineering slowing feature delivery. These issues made it difficult to scale the product confidently while maintaining UX quality and predictability.",
     keyIssues: [
-      "Lack of a single, shared design system across products",
-      "Visual and behavioral inconsistencies between similar components",
-      "Frequent design drift caused by ad-hoc modifications",
-      "Friction between design and engineering due to unclear or inconsistent specifications",
-      "Limited ability to scale UI efficiently as the product evolved",
-      "These problems impacted development velocity, UI quality, and long-term maintainability."
+      "No shared design system across products, leading to duplicated work",
+      "Inconsistent component behavior and visual drift between teams",
+      "High friction between design and engineering, slowing feature delivery"
     ],
-    solution: "Designed and scaled a unified design system for Empower's corporate website and core financial application. Focused on reusable components, consistent UI patterns, and clear data-heavy interfaces to support complex financial workflows across teams and products. The system balanced consistency with flexibility, enabling teams to move faster while maintaining quality and improving user experience through consistent, predictable interactions across all touchpoints.",
+    solution: "I designed and implemented a unified design system that standardized UI foundations, component behavior, and interaction patterns across the platform. Beyond creating components, I established the system as shared product infrastructure with clear ownership, governance, and adoption processes. The system was designed to scale with the organization and support long-term product evolution rather than short-term UI fixes.",
     approach: [
-      "Conducted comprehensive UI audit across hundreds of screens and components, identifying inconsistency patterns and documenting pain points from both design and engineering perspectives",
-      "Interviewed designers and engineers to understand technical constraints, workflow challenges, and adoption barriers",
-      "Designed scalable design system architecture with reusable components, comprehensive design tokens, and interaction patterns",
-      "Built interactive Figma prototypes with component variants and states for validation with engineering teams",
-      "Validated design decisions through internal usability reviews and cross-functional feedback sessions to ensure components met both user needs and technical requirements",
-      "Established design review process with regular syncs with engineering leads and design system council meetings",
-      "Created comprehensive documentation, component library, and onboarding materials for design system adoption",
-      "Iterated through multiple major versions based on team feedback, usage patterns, and evolving product needs",
-      "Made design decisions collaboratively, balancing consistency, reusability, technical feasibility, and long-term maintainability"
+      "Audited existing UI patterns and identified inconsistencies",
+      "Collaborated with designers and engineers to understand constraints and workflows",
+      "Built a token-based foundation for color, typography, spacing, and motion",
+      "Designed core components with clearly defined states and behaviors",
+      "Created responsive patterns to support multiple breakpoints and use cases",
+      "Validated system decisions through internal reviews and cross-functional feedback",
+      "Documented usage guidelines and established review and contribution processes",
+      "Iterated on the system based on real product usage and feedback"
     ],
     impact: [
-      "Reduced design-to-development handoff time from weeks to days through standardized components and clear specifications",
-      "Accelerated feature shipping across multiple product teams by enabling faster component reuse and reducing design-engineering friction",
-      "Significantly reduced recurring UI inconsistency issues through standardized components and design tokens",
-      "Improved user experience through consistent, predictable interactions and reduced cognitive load across all Empower products",
-      "Enabled designers to focus on product strategy by reducing time spent on repetitive component design through reusable library",
-      "Improved design-engineering alignment and reduced rework through clearer specifications and collaborative review process",
-      "Established design governance process adopted by designers across multiple product areas, ensuring long-term system quality"
+      "Reduced design-to-development handoff time from weeks to days",
+      "Accelerated feature delivery across multiple product teams",
+      "Eliminated recurring UI inconsistencies caused by ad-hoc implementations",
+      "Improved predictability and usability across core financial workflows",
+      "Design system became a core enabler of product velocity and UX quality"
     ],
-    reflection: "This project reinforced my experience designing at a system level — balancing product requirements, engineering constraints, and long-term scalability while maintaining a high standard of visual and interaction quality across a complex financial platform. Leading the design system initiative required not just design skills, but strategic thinking, cross-functional influence, and the ability to drive adoption across multiple teams. Through direction-setting, establishing governance processes, and enabling team adoption, I influenced how design and engineering collaborated and how products were built at scale. The measurable impact on development velocity and design quality validated the strategic importance of investing in foundational design infrastructure. This experience taught me that great design systems are not just collections of components, but strategic enablers that unlock team productivity and product quality at scale. Key learnings included the importance of governance from day one, the need to balance consistency with flexibility, and how to build systems that evolve with product needs.",
+    reflection: "This project reinforced that a design system is not a collection of components, but shared product infrastructure. Its success depended as much on governance, adoption, and collaboration as on visual or interaction design. By aligning design and engineering around a single, scalable system, the team was able to focus on solving product problems instead of re-solving UI fundamentals.",
     areasOfEmphasis: [
-      "Product Design (UX/UI)",
-      "Complex Dashboards & Data-heavy interfaces",
-      "Design Systems & UI Kits",
+      "Product Design",
+      "Design System",
       "FinTech",
-      "Cross-functional collaboration"
+      "Complex Dashboards"
     ]
   },
   {
     slug: "1inch",
-    title: "1inch.io",
-    subtitle: "UX/UI for DeFi Platform",
+    title: "1inch",
+    subtitle: "Improving DeFi Swap Experience at Scale",
     year: "2023",
     image: "/images/projects/1inch.png",
-    overview: "Designed and evolved the core web experience for 1inch — a leading DeFi aggregator processing millions of dollars in daily transaction volume across 383+ liquidity sources. Owned UX/UI for critical user flows including swap, staking, advanced trading (1inch Pro), and developer tools, while establishing design system foundations that improved delivery speed and consistency across the platform.",
-    context: "1inch operates as a decentralized exchange aggregator, routing transactions across hundreds of liquidity sources to find optimal rates for users. The platform serves millions of wallet addresses, processes high-volume financial transactions, and caters to both advanced traders and users new to DeFi. UX quality is critical because transaction errors can result in significant financial loss, and users need clear information to make informed decisions in a space where transactions are irreversible.",
+    overview: "I worked as a Senior Product Designer on the core web dApp of 1inch, a large-scale DeFi aggregator operating across hundreds of liquidity sources and serving millions of users. My work focused on improving complex swap and transaction flows, reducing cognitive load, and increasing user confidence when interacting with advanced DeFi mechanics. In parallel, I contributed to the evolution of the design system, enabling faster iteration and consistent UX across multiple product areas.",
+    context: "1inch is a high-scale DeFi platform aggregating liquidity from hundreds of sources and supporting complex financial interactions such as multi-route swaps, slippage control, gas optimization, and advanced trading modes. As the platform evolved, new features increased product complexity. While these features delivered strong technical value, they also raised the cognitive burden on users and introduced friction in critical transaction flows.",
     role: "Senior Product Designer",
     ownership: [
-      "UX/UI design for core web dApps: Swap interface, Staking & Delegate, 1inch Pro (advanced trading), Developer Portal",
-      "Design system evolution & governance: introduced design tokens, standardized component library, established scalable architecture for light/dark themes",
-      "UX research and validation: conducted usability testing, analyzed user behavior through product analytics, synthesized qualitative feedback",
-      "Cross-functional collaboration with smart contract engineers, frontend developers, and product owners"
+      "UX optimization for swap and advanced trading flows",
+      "Designing and validating complex user flows with multiple decision points",
+      "Simplifying data-heavy interfaces while preserving transparency",
+      "Collaborating closely with product, engineering, and analytics teams",
+      "Contributing reusable patterns and components to the design system"
     ],
     collaboration: [
-      "Smart Contract Engineers (gas optimization requirements, transaction flow constraints, security considerations)",
-      "Frontend Developers (component architecture, implementation patterns, technical feasibility)",
-      "Product Owners (feature prioritization, user metrics, business impact measurement)"
+      "Product Managers — feature prioritization, user metrics, business impact",
+      "Engineers — technical constraints, implementation patterns, delivery alignment",
+      "Analytics — user behavior analysis, drop-off points, conversion metrics"
     ],
-    problem: "Users faced high cognitive load when performing complex DeFi operations, leading to potential errors and friction in the transaction process. DeFi swaps involve multiple variables (slippage tolerance, gas costs, liquidity sources, price impact) that users must understand to make informed decisions, but existing interfaces either overwhelmed users with information or hid critical details.",
+    problem: "Analysis of product behavior and internal feedback highlighted several issues: high cognitive load during swap configuration and confirmation, users frequently abandoned advanced swap modes or reverted to simpler flows, complex parameters (rates, presets, advanced settings) were difficult to scan and interpret, inconsistent UX patterns across features increased hesitation and reduced confidence. These issues directly affected conversion, retention, and trust in core DeFi interactions.",
     keyIssues: [
-      "Complex transaction data visualization — multiple variables needed to be presented clearly without overwhelming users",
-      "Transaction confidence — users needed constant reassurance that transactions were progressing correctly",
-      "Error handling — blockchain transactions can fail for many reasons, requiring clear, actionable error messages",
-      "Performance perception — slow interfaces erode confidence in a space where transactions are irreversible",
-      "Pro vs non-pro users — interface needed to support both advanced traders and DeFi newcomers through progressive disclosure"
+      "High cognitive load during swap configuration and confirmation",
+      "Users frequently abandoned advanced swap modes or reverted to simpler flows",
+      "Complex parameters (rates, presets, advanced settings) were difficult to scan and interpret",
+      "Inconsistent UX patterns across features increased hesitation and reduced confidence"
     ],
-    solution: "Designed streamlined swap interface with progressive disclosure, showing essential information (tokens, amounts, estimated output) first with advanced options accessible but not prominent. Implemented comprehensive transaction feedback system with real-time updates, clear error states, and confirmation patterns. Established design system with reusable DeFi-specific components, design tokens, and scalable architecture that improved delivery speed and consistency across Swap, Staking, Pro, and Developer Portal.",
+    solution: "I redesigned key parts of the swap experience with a focus on clarity, predictability, and progressive disclosure. The goal was not to hide complexity, but to surface the right information at the right moment and guide users through decision-heavy flows with confidence. All changes were implemented within the existing design system, ensuring consistency across products and scalability for future features.",
     approach: [
-      "Conducted market and competitor analysis of leading DeFi platforms to understand common patterns and identify UX gaps",
-      "Performed UX research through user interviews with both DeFi power users and newcomers to understand cognitive load, security concerns, and transaction confidence factors",
-      "Analyzed product analytics to identify drop-off points in transaction flows and measure the impact of design changes",
-      "Conducted comprehensive audits of existing swap flows, identifying friction points and opportunities for simplification",
-      "Collaborated with smart contract engineers to understand technical constraints: gas optimization requirements, transaction flow limitations, and contract interaction patterns",
-      "Designed interaction patterns and information hierarchy using typography, spacing, and color to guide user attention while maintaining clarity",
-      "Created comprehensive transaction status system with real-time updates, clear error states, and confirmation patterns including recovery flows",
-      "Conducted usability testing sessions with target users to validate interface clarity, transaction confidence, and error handling",
-      "Established design system with reusable DeFi-specific components, design tokens, and documentation that enabled faster component reuse and improved design-engineering alignment"
+      "Analyzed user behavior and drop-off points in swap flows",
+      "Reviewed internal analytics and qualitative feedback",
+      "Identified moments of hesitation, confusion, and loss of confidence",
+      "Simplified data presentation for critical values (rates, receive amounts, impact)",
+      "Introduced clearer visual hierarchy and scan patterns",
+      "Applied progressive disclosure to advanced settings",
+      "Reduced visual noise while preserving decision transparency",
+      "Conducted usability reviews and internal feedback sessions",
+      "Standardized components used in swap and transaction flows",
+      "Aligned interaction patterns across product areas"
     ],
     impact: [
-      "Product analytics showed improved user retention following UX improvements, with users more likely to complete transactions and return to the platform",
-      "Design system and standardized components enabled faster feature shipping, with engineering teams able to implement new features more quickly using existing components",
-      "Design system was adopted across multiple products (Swap, Staking, Pro, Developer Portal), ensuring visual and behavioral consistency",
-      "Qualitative feedback from users indicated improved confidence in transactions, clearer understanding of transaction status, and better error recovery",
-      "Reduced time spent on repetitive component design enabled designers to focus on product strategy and user research",
-      "Engineering teams reported improved alignment and reduced rework through clearer specifications and component documentation"
+      "Users were less likely to abandon advanced swap flows",
+      "Confidence and clarity during transaction configuration improved",
+      "UX friction caused by complex parameters was significantly reduced",
+      "Teams were able to iterate faster using standardized components",
+      "All improvements were validated through product analytics, internal reviews, and qualitative feedback"
     ],
-    reflection: "Designing for DeFi requires balancing three critical factors: security, clarity, and efficiency. Users need to trust the system (security), understand what's happening (clarity), and complete transactions quickly (efficiency). The challenge was making complex blockchain mechanics feel simple without hiding critical information that users need to make informed decisions. Key learnings included the importance of progressive disclosure for DeFi interfaces — showing essential information upfront while making advanced options accessible. I also learned that transaction feedback is critical — users need constant reassurance that their transaction is progressing correctly, especially in a space where errors can be costly. The collaboration with smart contract engineers was essential — understanding gas optimization and contract constraints directly informed design decisions, ensuring that designs worked within technical realities while optimizing for user experience. This experience reinforced that great DeFi UX requires deep technical understanding, not just surface-level interface design. The work on 1inch's design system and component standardization directly informed my approach to ODOS, where I applied similar system thinking to create scalable, consistent interfaces for another DeFi platform.",
+    reflection: "Designing for DeFi requires balancing transparency, security, and efficiency. Users must understand what is happening, trust the system, and complete transactions with confidence — often under conditions where mistakes are costly. This project reinforced the importance of progressive disclosure, strong visual hierarchy, and predictable interaction patterns when designing for technically complex domains.",
     areasOfEmphasis: [
-      "Web3",
       "DeFi",
       "Product Design",
-      "Design System"
+      "Design System",
+      "Web3"
     ]
   },
   {
     slug: "social-platform",
     title: "GETTR",
     subtitle: "Social Platform at Scale",
-    year: "2022",
+    year: "2021 — 2022",
     image: "/images/projects/gettr.png",
     overview: "GETTR is a large-scale social media platform serving 5.5M+ users, built around rapid feature expansion and platform scalability. During aggressive product growth, I led UX and system-level design to enable parallel feature delivery while maintaining UX consistency and quality under tight timelines.",
     context: "GETTR was rapidly scaling both its user base and feature set. The platform needed to expand core social functionality while maintaining usability, consistency, and delivery speed. New features were shipping in parallel, requirements were changing frequently, and stakeholders expected fast execution without UX regression.",
-    role: "Senior Product Designer (Web Platform)",
+    role: "Senior Product Designer",
     ownership: [
+      "I led UX and design system evolution for a rapidly scaling social media platform with 5.5M+ users",
       "Defining UX patterns for new product areas",
       "Designing and validating complex user flows",
       "Scaling and maintaining the design system",

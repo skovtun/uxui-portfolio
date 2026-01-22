@@ -157,16 +157,26 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
                 <BulletList items={project.keyIssues} />
               </div>
 
-              {/* My Responsibility - For GETTR */}
-              {project.slug === "social-platform" && (
+              {/* My Responsibility - For GETTR, Empower, and 1inch */}
+              {(project.slug === "social-platform" || project.slug === "empower" || project.slug === "1inch") && (
                 <div>
                   <SectionHeader>My Responsibility</SectionHeader>
                   <p className="text-foreground/50 mb-6 leading-relaxed">
-                    I was responsible for end-to-end UX and system-level design across the platform.
+                    {project.slug === "social-platform" 
+                      ? "I was responsible for end-to-end UX and system-level design across the platform."
+                      : project.slug === "empower"
+                      ? "I owned the design system end-to-end and acted as the primary driver of its architecture, adoption, and evolution."
+                      : "I owned the UX/UI design of core swap flows end-to-end and contributed to system-level improvements."
+                    }
                   </p>
                   <BulletList items={project.ownership} maxWidth="2xl" />
                   <p className="text-foreground/50 mt-6 leading-relaxed">
-                    I worked closely with PMs, stakeholders, and engineering to translate fast-moving requirements into coherent user experiences.
+                    {project.slug === "social-platform"
+                      ? "I worked closely with PMs, stakeholders, and engineering to translate fast-moving requirements into coherent user experiences."
+                      : project.slug === "empower"
+                      ? "This role required balancing UX quality, technical feasibility, and long-term scalability."
+                      : "This role required deep understanding of both user behavior and DeFi mechanics."
+                    }
                   </p>
                 </div>
               )}

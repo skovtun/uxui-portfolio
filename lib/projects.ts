@@ -26,7 +26,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     year: "2024 — now",
     image: "/images/projects/empower.png",
     overview: "I led the design and scaling of a unified design system that became the foundational UI infrastructure for Empower's large-scale financial platform. The system supported multiple product teams and complex financial workflows, enabling consistent user experiences and significantly improving design–engineering efficiency across the organization.",
-    context: "Empower is a large-scale financial platform with multiple products evolving in parallel. Prior to this initiative, teams worked with fragmented UI patterns, inconsistent components, and ad-hoc design decisions. As the platform scaled, these inconsistencies increasingly slowed development, created UX debt, and introduced risk into core financial flows.",
+    context: "Empower is a large-scale financial platform serving millions of users across personal finance, retirement planning, and enterprise retirement products. Prior to this initiative, teams worked with fragmented UI patterns, inconsistent components, and ad-hoc design decisions. As the platform scaled, these inconsistencies increasingly slowed development, created UX debt, and introduced risk into core financial flows.",
     role: "Senior UX/UI Designer",
     ownership: [
       "Defined system architecture, interaction principles, and visual foundations",
@@ -41,7 +41,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Design System Council — governance process and system evolution",
       "Product Teams — adoption support and training across multiple product areas"
     ],
-    problem: "As the platform scaled, several systemic issues emerged: no shared design system across products leading to duplicated work, inconsistent component behavior and visual drift between teams, high friction between design and engineering slowing feature delivery. These issues made it difficult to scale the product confidently while maintaining UX quality and predictability.",
+    problem: "As the platform scaled, the lack of a shared design system became a structural bottleneck. Teams duplicated work, component behavior drifted across products, and design–engineering alignment degraded. As a result, feature delivery slowed and maintaining consistent, predictable UX at scale became increasingly difficult.",
     keyIssues: [
       "No shared design system across products, leading to duplicated work",
       "Inconsistent component behavior and visual drift between teams",

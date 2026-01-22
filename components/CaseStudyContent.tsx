@@ -102,9 +102,6 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
             transition={{ duration: 1, ease: "easeOut" }}
             className="relative aspect-video rounded-4xl overflow-hidden border border-foreground/3 bg-foreground/5 shadow-2xl"
           >
-            {/* Skeleton loader */}
-            <div className="absolute inset-0 bg-foreground/5 animate-pulse" aria-hidden="true" />
-            
             <Image
               src={project.image}
               alt={`${project.title} - ${project.subtitle}`}
@@ -771,7 +768,6 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
                 className="group relative flex items-center gap-6 overflow-hidden rounded-3xl bg-linear-to-br from-foreground/3 to-transparent border border-foreground/5 hover:border-accent/30 transition-all hover:scale-[1.01] p-6 md:p-8 flex-row-reverse"
               >
                 <div className="relative w-32 h-20 md:w-40 md:h-24 shrink-0 overflow-hidden rounded-2xl aspect-video">
-                  <div className="absolute inset-0 bg-foreground/5 animate-pulse" aria-hidden="true" />
                   <Image
                     src={previousProject.image}
                     alt={`${previousProject.title} - ${previousProject.subtitle}`}

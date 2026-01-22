@@ -36,11 +36,13 @@ export function ImageWithCaption({
         className="relative w-full"
         style={{ aspectRatio: `${width}/${height}` }}
       >
-        {/* Skeleton loader */}
-        <div 
-          className="absolute inset-0 bg-foreground/5 animate-pulse rounded-lg"
-          aria-hidden="true"
-        />
+        {/* Skeleton loader - скрывается после загрузки */}
+        {isLoading && (
+          <div 
+            className="absolute inset-0 bg-foreground/5 animate-pulse rounded-lg z-0"
+            aria-hidden="true"
+          />
+        )}
         
         <Image
           src={src}
@@ -53,6 +55,7 @@ export function ImageWithCaption({
           blurDataURL={blurDataURL}
           loading="lazy"
           onLoad={() => setIsLoading(false)}
+          onLoadingComplete={() => setIsLoading(false)}
         />
       </motion.div>
       {caption && (

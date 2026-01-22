@@ -70,9 +70,6 @@ function ProjectCard({ project, index, isLast }: { project: typeof PROJECTS[0], 
               aria-label={`View case study: ${project.title}`}
             >
               <div className="absolute inset-0 z-0">
-                {/* Skeleton loader */}
-                <div className="absolute inset-0 bg-foreground/5 animate-pulse" aria-hidden="true" />
-                
                 <Image
                   src={project.image}
                   alt={`${project.title} - ${project.category}`}

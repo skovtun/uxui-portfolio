@@ -184,7 +184,6 @@ export function BrandsSection() {
                 viewport={{ once: true }}
                 className="relative h-12 w-full max-w-[140px] opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-default"
               >
-              <div className="absolute inset-0 bg-foreground/5 animate-pulse" aria-hidden="true" />
               <Image
                 src={brand.logo}
                 alt={brand.name}
@@ -376,7 +375,6 @@ export function AboutSection() {
                             rel="noopener noreferrer"
                             className="h-16 w-16 rounded-full overflow-hidden relative ring-4 ring-accent/10 shrink-0 hover:ring-accent/20 transition-all"
                           >
-                            <div className="absolute inset-0 bg-foreground/5 animate-pulse rounded-full" aria-hidden="true" />
                             <Image
                               src={testimonial.avatar}
                               alt={testimonial.author}
@@ -464,7 +462,6 @@ export function Footer() {
             >
                 {[...CAROUSEL_IMAGES.slice(0, Math.ceil(CAROUSEL_IMAGES.length / 2)), ...CAROUSEL_IMAGES.slice(0, Math.ceil(CAROUSEL_IMAGES.length / 2))].map((src, i) => (
                   <div key={`left-${i}`} className="relative w-full aspect-340/300 rounded-4xl overflow-hidden border border-foreground/5 bg-foreground/5 shrink-0">
-                    <div className="absolute inset-0 bg-foreground/5 animate-pulse" aria-hidden="true" />
                     <Image 
                       src={src} 
                       alt="UI" 
@@ -487,7 +484,6 @@ export function Footer() {
               >
                 {[...CAROUSEL_IMAGES.slice(Math.ceil(CAROUSEL_IMAGES.length / 2)), ...CAROUSEL_IMAGES.slice(Math.ceil(CAROUSEL_IMAGES.length / 2))].reverse().map((src, i) => (
                   <div key={`right-${i}`} className="relative w-full aspect-340/300 rounded-4xl overflow-hidden border border-foreground/5 bg-foreground/5 shrink-0">
-                    <div className="absolute inset-0 bg-foreground/5 animate-pulse" aria-hidden="true" />
                     <Image 
                       src={src} 
                       alt="UI" 

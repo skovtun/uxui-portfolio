@@ -227,7 +227,6 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
               {project.slug === "social-platform" && (
                 <>
                   {/* Promotional/hero image displayed without caption as visual introduction to the case study */}
-                  {/* Temporarily hidden - uncomment to restore
                   <div className="mb-6">
                     <Image
                       src="/images/case-studies/gettr-promo.png"
@@ -236,9 +235,10 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
                       height={800}
                       className="w-full h-auto"
                       quality={90}
+                      loading="eager"
+                      priority
                     />
                   </div>
-                  */}
                   <ImageWithCaption
                     src="/images/case-studies/gettr-mobile-ui.png"
                     alt="GETTR Mobile Interface - Mobile-First Design"

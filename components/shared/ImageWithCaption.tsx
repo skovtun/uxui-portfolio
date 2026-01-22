@@ -34,7 +34,6 @@ export function ImageWithCaption({
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
         className="relative w-full"
-        style={{ aspectRatio: `${width}/${height}` }}
       >
         {/* Skeleton loader - скрывается после загрузки */}
         {isLoading && (

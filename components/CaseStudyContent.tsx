@@ -124,7 +124,7 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
           <div className="max-w-[1600px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-24">
               {/* Main Content */}
-              <article className="lg:col-span-7 space-y-16 md:space-y-20">
+              <article className="lg:col-span-7 space-y-12 md:space-y-16">
               {/* Overview */}
               <div>
                 <SectionHeader>Overview</SectionHeader>
@@ -445,7 +445,7 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
               {/* Deep Dive: Fusion Swap Adoption - For 1inch */}
               {project.slug === "1inch" && (
                 <div className="pt-8 md:pt-12">
-                  <ContentBlock variant="highlight" className="space-y-12">
+                  <ContentBlock variant="highlight" className="space-y-20">
                     <div>
                       <LabelText variant="accent" tracking="widest" className="mb-4 block">
                         Deep Dive — Problem Solving Case
@@ -455,10 +455,10 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
                       </SubsectionHeader>
                     </div>
                     
-                    <div className="space-y-10">
+                    <div className="space-y-16">
                       {/* Context */}
                       <div>
-                        <h4 className="text-lg md:text-xl font-semibold text-foreground mb-3">
+                        <h4 className="text-lg md:text-xl font-semibold text-foreground mb-4">
                           Context
                         </h4>
                         <p className="text-foreground/50 leading-relaxed">
@@ -468,7 +468,7 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
 
                       {/* Problem */}
                       <div>
-                        <h4 className="text-lg md:text-xl font-semibold text-foreground mb-3">
+                        <h4 className="text-lg md:text-xl font-semibold text-foreground mb-4">
                           Problem
                         </h4>
                         <p className="text-foreground/50 leading-relaxed mb-6">
@@ -488,17 +488,17 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
 
                       {/* What I Did */}
                       <div>
-                        <h4 className="text-lg md:text-xl font-semibold text-foreground mb-3">
+                        <h4 className="text-lg md:text-xl font-semibold text-foreground mb-4">
                           What I Did (Hands-on Work)
                         </h4>
-                        <p className="text-foreground/50 leading-relaxed mb-6">
+                        <p className="text-foreground/50 leading-relaxed mb-8">
                           I worked end-to-end on improving the Fusion swap experience, combining data analysis, UX research, interface design, and validation.
                         </p>
 
-                        <div className="space-y-8">
+                        <div className="space-y-16">
                           {/* 1. Behavioral Analysis */}
                           <div>
-                            <h5 className="text-lg font-semibold text-foreground mb-3">1. Behavioral Analysis & Analytics</h5>
+                            <h5 className="text-lg font-semibold text-foreground mb-4">1. Behavioral Analysis & Analytics</h5>
                             <p className="text-foreground/50 leading-relaxed mb-4">
                               Analyzed detailed user flow data to identify drop-off points. Mapped transitions between Fusion, Custom, and Legacy modes. Identified critical moments where users abandoned or downgraded the swap flow. This helped isolate where and why users were leaving Fusion.
                             </p>
@@ -510,7 +510,7 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
                               height={800}
                               quality={90}
                             />
-                            <div className="mt-6">
+                            <div className="mt-8">
                               <ImageWithCaption
                                 src="/images/case-studies/1inch-swap-inerface.png"
                                 alt="1inch Fusion Swap Interface - Problematic Interface"
@@ -524,7 +524,7 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
 
                           {/* 2. UX Research & User Journey Mapping */}
                           <div>
-                            <h5 className="text-lg font-semibold text-foreground mb-3">2. UX Research & User Journey Mapping</h5>
+                            <h5 className="text-lg font-semibold text-foreground mb-4">2. UX Research & User Journey Mapping</h5>
                             <p className="text-foreground/50 leading-relaxed mb-4">
                               Conducted internal reviews and usability sessions, collecting qualitative feedback from users and stakeholders. Reviewed real swap scenarios to understand confusion around presets, hesitation caused by advanced parameters, and lack of confidence at the confirmation stage. Created a detailed user journey from opening Fusion to swap confirmation, mapping emotional states, hesitation points, and trust signals. This combined research approach revealed critical friction points where users lost confidence or abandoned the flow.
                             </p>
@@ -536,7 +536,7 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
                               height={800}
                               quality={90}
                             />
-                            <div className="mt-6">
+                            <div className="mt-8">
                               <ImageWithCaption
                                 src="/images/case-studies/1inch-user-journey.png"
                                 alt="1inch User Journey Mapping"
@@ -550,7 +550,7 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
 
                           {/* 3. UX & UI Design Improvements */}
                           <div>
-                            <h5 className="text-lg font-semibold text-foreground mb-3">3. UX & UI Design Improvements</h5>
+                            <h5 className="text-lg font-semibold text-foreground mb-4">3. UX & UI Design Improvements</h5>
                             <p className="text-foreground/50 leading-relaxed mb-4">
                               I redesigned key parts of the Fusion swap interface with a focus on clarity, confidence, and progressive disclosure: simplified presentation of rate ranges and outcomes, improved visibility and meaning of Fusion presets, reduced visual noise in advanced settings, made critical values (receive / min receive / rate impact) easier to scan, and designed clearer separation between default and advanced decision paths. All changes were implemented within the existing design system and aligned with platform-wide UI standards.
                             </p>
@@ -558,7 +558,7 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
 
                           {/* 4. Solution Design & Implementation */}
                           <div>
-                            <h5 className="text-lg font-semibold text-foreground mb-3">4. Solution Design & Implementation</h5>
+                            <h5 className="text-lg font-semibold text-foreground mb-4">4. Solution Design & Implementation</h5>
                             <p className="text-foreground/50 leading-relaxed mb-4">
                               Based on insights from user journey mapping and interview feedback, I translated identified friction points into specific design solutions. The journey map revealed that users needed clearer value communication at preset selection, more confidence signals during rate calculation, and simplified decision paths at confirmation. Interview insights about confusion around presets led to redesigning preset presentation with clearer value propositions. Hesitation points around advanced parameters informed the progressive disclosure pattern. The lack of confidence at confirmation stage drove the addition of clear transaction summary and trust indicators. Each design decision directly addressed a specific pain point identified in the research phase.
                             </p>
@@ -571,7 +571,7 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
 
                       {/* Result & Impact */}
                       <div>
-                        <div className="mb-6">
+                        <div className="mb-8">
                           <ImageWithCaption
                             src="/images/case-studies/1inch-user-case-result.png"
                             alt="1inch Fusion Swap - Results & Impact"
@@ -581,7 +581,7 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
                             quality={90}
                           />
                         </div>
-                        <h4 className="text-lg md:text-xl font-semibold text-foreground mb-3">
+                        <h4 className="text-lg md:text-xl font-semibold text-foreground mb-4">
                           Result & Impact
                         </h4>
                         <p className="text-foreground/50 leading-relaxed mb-6">

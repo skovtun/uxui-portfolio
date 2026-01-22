@@ -26,7 +26,7 @@ export function SectionHeader({
   const baseClasses = `${sizeClasses[size]} font-bold tracking-tight leading-[0.9] text-foreground`;
   
   const variantClasses = {
-    default: "mb-8 uppercase",
+    default: "mb-10 uppercase",
     "with-accent": "mb-16 text-center lg:text-left",
     centered: "mb-16 text-center lg:text-left uppercase",
   };

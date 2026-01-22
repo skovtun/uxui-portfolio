@@ -24,7 +24,7 @@ export function SubsectionHeader({
   return (
     <Component 
       className={cn(
-        `${sizeClasses[size]} font-bold tracking-tight leading-[1.1] mb-6`,
+        `${sizeClasses[size]} font-bold tracking-tight leading-[1.1] mb-8`,
       className
       )}
       style={fontSizeStyle}

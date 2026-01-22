@@ -27,7 +27,7 @@ export function ImageWithCaption({
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <figure className="space-y-4">
+    <figure className="space-y-4 mb-12">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

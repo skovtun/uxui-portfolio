@@ -157,6 +157,20 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
                 <BulletList items={project.keyIssues} />
               </div>
 
+              {/* My Responsibility - For GETTR */}
+              {project.slug === "social-platform" && (
+                <div>
+                  <SectionHeader>My Responsibility</SectionHeader>
+                  <p className="text-foreground/50 mb-6 leading-relaxed">
+                    I was responsible for end-to-end UX and system-level design across the platform.
+                  </p>
+                  <BulletList items={project.ownership} maxWidth="2xl" />
+                  <p className="text-foreground/50 mt-6 leading-relaxed">
+                    I worked closely with PMs, stakeholders, and engineering to translate fast-moving requirements into coherent user experiences.
+                  </p>
+                </div>
+              )}
+
               {/* Solution */}
               <div>
                 <SectionHeader>Solution</SectionHeader>
@@ -320,30 +334,18 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
               {/* Approach Sub-sections - For GETTR */}
               {project.slug === "social-platform" && (
                 <div className="space-y-12 md:space-y-16">
-                  {/* UX Research & Competitive Analysis */}
+                  {/* UX Research & Analysis */}
                   <div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-                      UX Research & Competitive Analysis
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
+                      UX Research & Analysis
                     </h3>
                     <p className="text-foreground/50 leading-relaxed mb-6">
-                      To ground design decisions in real-world context, I conducted continuous UX research and competitive analysis.
+                      I conducted continuous UX and market research to inform design decisions. This included competitive analysis of major social platforms, analysis of existing UX friction points, and evaluation of emerging interaction patterns. Research was pragmatic and delivery-oriented, optimized for speed and relevance rather than academic depth.
                     </p>
                     <p className="text-foreground/50 leading-relaxed mb-6">
-                      The following (and many other) applications were constantly analyzed to understand patterns, expectations, and emerging trends in large-scale social platforms.
+                      Insights informed feature prioritization, information architecture, and interaction design.
                     </p>
-                    <p className="text-foreground/50 leading-relaxed mb-6">
-                      Research outputs informed:
-                    </p>
-                    <BulletList 
-                      items={[
-                        "Feature prioritization",
-                        "Interaction models",
-                        "Content discovery patterns",
-                        "Engagement and retention mechanics"
-                      ]} 
-                      maxWidth="2xl"
-                    />
-                    <div className="mt-8 space-y-6">
+                    <div className="mt-10">
                       <ImageWithCaption
                         src="/images/case-studies/gettr-research.png"
                         alt="GETTR Competitive and Product Research"
@@ -365,24 +367,16 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
 
                   {/* UX Design Execution */}
                   <div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
                       UX Design Execution
                     </h3>
                     <p className="text-foreground/50 leading-relaxed mb-6">
-                      The design process involved a high volume of structured UX work:
+                      The design process involved a high volume of structured UX work: 42 user flows designed and validated, 300+ wireframes created across features.
                     </p>
-                    <BulletList 
-                      items={[
-                        "42 detailed user flows covering new and existing features",
-                        "300+ wireframes to explore layouts, states, and edge cases",
-                        "Iterative refinement based on internal reviews and stakeholder feedback"
-                      ]} 
-                      maxWidth="2xl"
-                    />
-                    <p className="text-foreground/50 leading-relaxed mt-6 mb-8">
-                      This foundation ensured that high-fidelity design decisions were well-validated before visual execution.
+                    <p className="text-foreground/50 leading-relaxed mb-6">
+                      Wireframing was used as a primary tool for fast exploration, stakeholder alignment, early risk detection, and reducing rework in high-fidelity stages.
                     </p>
-                    <div className="space-y-6">
+                    <div className="mt-10">
                       <ImageWithCaption
                         src="/images/case-studies/gettr-wireframes.png"
                         alt="GETTR Wireframe Exploration"
@@ -404,31 +398,16 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
 
                   {/* Design System */}
                   <div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
                       Design System
                     </h3>
                     <p className="text-foreground/50 leading-relaxed mb-6">
-                      A critical part of the work was evolving the GETTR Design System to support scale.
+                      I evolved the GETTR Design System using Atomic Design methodology. Key contributions: standardized components across Web and App, unified interaction patterns, scalable component architecture, improved design-to-development handoff.
                     </p>
                     <p className="text-foreground/50 leading-relaxed mb-6">
-                      The system was built using Atomic Design methodology and covered both Web and App platforms.
+                      The system enabled faster feature delivery while maintaining UX consistency under high pressure.
                     </p>
-                    <p className="text-foreground/50 leading-relaxed mb-6">
-                      Key outcomes:
-                    </p>
-                    <BulletList 
-                      items={[
-                        "Standardized components and patterns across teams",
-                        "Improved design consistency and predictability",
-                        "Faster iteration cycles for new features",
-                        "A scalable foundation for long-term platform growth"
-                      ]} 
-                      maxWidth="2xl"
-                    />
-                    <p className="text-foreground/50 leading-relaxed mt-6 mb-8">
-                      The Design System became a central tool enabling parallel development without UX fragmentation.
-                    </p>
-                    <div className="space-y-6">
+                    <div className="mt-10">
                       <ImageWithCaption
                         src="/images/case-studies/gettr-ui-kit.png"
                         alt="GETTR Design System - Atomic Design"
@@ -563,16 +542,14 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
                               height={800}
                               quality={90}
                             />
-                            <div className="mt-8">
-                              <ImageWithCaption
-                                src="/images/case-studies/1inch-swap-inerface.png"
-                                alt="1inch Fusion Swap Interface - Problematic Interface"
-                                caption="The original Fusion swap interface that needed improvement. The interface suffered from unclear rate range presentation, low visibility of Fusion presets, excessive visual noise in advanced settings, and difficulty scanning critical values (receive / min receive / rate impact). These issues contributed to user confusion and abandonment."
-                                width={1200}
-                                height={800}
-                                quality={90}
-                              />
-                            </div>
+                            <ImageWithCaption
+                              src="/images/case-studies/1inch-swap-inerface.png"
+                              alt="1inch Fusion Swap Interface - Problematic Interface"
+                              caption="The original Fusion swap interface that needed improvement. The interface suffered from unclear rate range presentation, low visibility of Fusion presets, excessive visual noise in advanced settings, and difficulty scanning critical values (receive / min receive / rate impact). These issues contributed to user confusion and abandonment."
+                              width={1200}
+                              height={800}
+                              quality={90}
+                            />
                           </div>
 
                           {/* 2. UX Research & User Journey Mapping */}
@@ -589,16 +566,14 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
                               height={800}
                               quality={90}
                             />
-                            <div className="mt-8">
-                              <ImageWithCaption
-                                src="/images/case-studies/1inch-user-journey.png"
-                                alt="1inch User Journey Mapping"
-                                caption="Detailed user journey mapping from opening Fusion to swap confirmation, identifying emotional states, hesitation points, and trust signals. This journey map directly informed design decisions by highlighting where users needed more clarity, confidence, and guidance throughout the swap process."
-                                width={1200}
-                                height={800}
-                                quality={90}
-                              />
-                            </div>
+                            <ImageWithCaption
+                              src="/images/case-studies/1inch-user-journey.png"
+                              alt="1inch User Journey Mapping"
+                              caption="Detailed user journey mapping from opening Fusion to swap confirmation, identifying emotional states, hesitation points, and trust signals. This journey map directly informed design decisions by highlighting where users needed more clarity, confidence, and guidance throughout the swap process."
+                              width={1200}
+                              height={800}
+                              quality={90}
+                            />
                           </div>
 
                           {/* 3. UX & UI Design Improvements */}

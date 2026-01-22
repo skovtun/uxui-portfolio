@@ -142,48 +142,47 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     slug: "social-platform",
     title: "GETTR",
-    subtitle: "Large-scale social media platform",
+    subtitle: "Social Platform at Scale",
     year: "2022",
     image: "/images/projects/gettr.png",
-    overview: "GETTR is a large-scale social media platform founded on the principles of free speech, independent thought, and rejection of political censorship and cancel culture. The platform serves 5.5M+ users and supports a rapidly evolving feature ecosystem. During a period of aggressive product expansion, I led UX and UI design efforts focused on scaling the platform's core experience while maintaining usability, consistency, and long-term design sustainability.",
-    context: "GETTR was actively expanding its product surface with multiple new feature areas, including: Livestreams, Short video content (Vision), Direct messaging, Analytics and creator tools, Referral and growth mechanisms. At the same time, existing features required UX improvements to support increasing user activity and engagement. The platform operated under tight timelines, high stakeholder involvement, and strong market pressure to ship fast without compromising user experience quality.",
+    overview: "GETTR is a large-scale social media platform serving 5.5M+ users, built around rapid feature expansion and platform scalability. During aggressive product growth, I led UX and system-level design to enable parallel feature delivery while maintaining UX consistency and quality under tight timelines.",
+    context: "GETTR was rapidly scaling both its user base and feature set. The platform needed to expand core social functionality while maintaining usability, consistency, and delivery speed. New features were shipping in parallel, requirements were changing frequently, and stakeholders expected fast execution without UX regression.",
     role: "Senior Product Designer (Web Platform)",
     ownership: [
-      "Led UX and UI design for core platform surfaces",
-      "Owned user flows, wireframes, high-fidelity designs, and prototypes",
-      "Drove Design System evolution and adoption",
-      "Worked closely with PMs, engineers, marketing, and stakeholders",
-      "Balanced speed, quality, and scalability under tight deadlines"
+      "Defining UX patterns for new product areas",
+      "Designing and validating complex user flows",
+      "Scaling and maintaining the design system",
+      "Aligning product, design, and engineering under tight timelines"
     ],
     collaboration: [
-      "Product Managers — feature requirements, prioritization, user metrics, business objectives",
-      "Engineers — technical feasibility, implementation constraints, delivery alignment",
-      "Marketing & Growth — feature adoption and rollout requirements",
-      "Stakeholders — strategic alignment and trade-off decisions"
+      "Product Managers — prioritization, scope definition, trade-offs",
+      "Engineers — feasibility, implementation constraints, delivery alignment",
+      "Marketing & Growth — feature adoption and rollout requirements"
     ],
-    problem: "Rapid feature development introduced several UX risks that became visible during ongoing feature delivery: fragmentation of user experience across new and existing features, inconsistent interaction patterns between teams and product areas, increasing design and development complexity due to lack of shared standards, difficulty scaling design output while maintaining quality and speed. Without a structured UX approach and a scalable design system, further growth would significantly degrade usability and slow down delivery.",
+    problem: "Rapid feature development introduced several UX risks: UX fragmentation across features, increasing design debt, inconsistent interaction patterns, lack of a scalable system to support rapid growth. Without structural changes, scaling feature delivery would degrade UX quality and execution speed.",
     keyIssues: [
       "Fragmentation of user experience across new and existing features",
       "Inconsistent interaction patterns between teams and product areas",
       "Increasing design and development complexity due to lack of shared standards",
       "Difficulty scaling design output while maintaining quality and speed"
     ],
-    solution: "I approached the problem by focusing on scalability, standardization, and clarity across the platform. Key directions included: designing scalable UX frameworks for new feature areas, standardizing interaction patterns and information architecture across the platform, improving existing features to align with a unified experience model, expanding and formalizing the Design System to support faster, more consistent delivery. This approach allowed multiple teams to work in parallel while preserving a coherent user experience.",
+    solution: "I approached the problem by focusing on scalability, standardization, and clarity across the platform. Key directions included: designing scalable UX frameworks for new feature areas, standardizing interaction patterns and information architecture, improving existing features to align with a unified experience model, expanding and formalizing the Design System to support faster, more consistent delivery. This approach allowed multiple teams to work in parallel while preserving a coherent user experience.",
     approach: [
-      "Conducted continuous UX research and competitive analysis to ground design decisions in real-world context",
-      "Analyzed leading social platforms to understand patterns, expectations, and emerging trends",
-      "Designed 42 detailed user flows covering new and existing features",
-      "Created 300+ wireframes to explore layouts, states, and edge cases",
-      "Iteratively refined designs based on internal reviews and stakeholder feedback",
-      "Evolved the Design System using Atomic Design methodology for both Web and App platforms"
+      "Consolidated inputs from user requests, stakeholders, marketing, and trend analysis",
+      "Conducted UX research and competitive analysis across leading social platforms",
+      "Designed and validated 42 user flows across new and existing features",
+      "Produced 300+ wireframes to explore information architecture, interaction models, and edge cases",
+      "Evolved the Design System using Atomic Design methodology for both Web and App platforms",
+      "Standardized decision-making to reduce ambiguity and rework"
     ],
     impact: [
-      "Improved platform coherence during rapid feature expansion",
-      "Faster and more predictable design and development workflows",
-      "Higher confidence in UX decisions across teams",
-      "Impact was validated through internal reviews, qualitative feedback, analytics, and team-wide evaluation, where design decisions and patterns became the baseline for further feature development"
+      "Scalable UX foundation for rapid feature development",
+      "Improved consistency across product areas",
+      "Reduced design friction during parallel feature delivery",
+      "Design system became a core enabler of product velocity",
+      "Impact validated through internal reviews, qualitative feedback, analytics, and team-wide evaluation"
     ],
-    reflection: "This project strengthened my ability to design for scale in complex, fast-moving environments. Key learnings: scalable UX systems are critical for long-term product health, Design Systems are not just UI libraries, but organizational accelerators, clear UX foundations enable teams to move faster without sacrificing quality. The experience directly informed my later work on other large-scale platforms and DeFi products.",
+    reflection: "This project reinforced that at scale, design systems and process discipline are leverage, not overhead. When speed is critical, UX quality depends on systems that enable teams to move quickly without fragmentation. The experience directly informed my later work on other large-scale platforms and DeFi products.",
     areasOfEmphasis: [
       "Product Design",
       "Mobile",

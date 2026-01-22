@@ -184,11 +184,13 @@ export function BrandsSection() {
                 viewport={{ once: true }}
                 className="relative h-12 w-full max-w-[140px] opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-default"
               >
+              <div className="absolute inset-0 bg-foreground/5 animate-pulse" aria-hidden="true" />
               <Image
                 src={brand.logo}
                 alt={brand.name}
                 fill
                 className="object-contain"
+                loading="lazy"
               />
             </motion.div>
           ))}
@@ -374,12 +376,16 @@ export function AboutSection() {
                             rel="noopener noreferrer"
                             className="h-16 w-16 rounded-full overflow-hidden relative ring-4 ring-accent/10 shrink-0 hover:ring-accent/20 transition-all"
                           >
-                    <Image
+                            <div className="absolute inset-0 bg-foreground/5 animate-pulse rounded-full" aria-hidden="true" />
+                            <Image
                               src={testimonial.avatar}
                               alt={testimonial.author}
-                      fill
-                      className="object-cover"
-                    />
+                              fill
+                              className="object-cover"
+                              loading="lazy"
+                              placeholder="blur"
+                              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                            />
                           </a>
                           <div className="flex-1 min-w-0">
                             <h4 className="text-xl font-bold tracking-tight truncate">{testimonial.author}</h4>
@@ -458,7 +464,16 @@ export function Footer() {
             >
                 {[...CAROUSEL_IMAGES.slice(0, Math.ceil(CAROUSEL_IMAGES.length / 2)), ...CAROUSEL_IMAGES.slice(0, Math.ceil(CAROUSEL_IMAGES.length / 2))].map((src, i) => (
                   <div key={`left-${i}`} className="relative w-full aspect-340/300 rounded-4xl overflow-hidden border border-foreground/5 bg-foreground/5 shrink-0">
-                    <Image src={src} alt="UI" fill className="object-cover" />
+                    <div className="absolute inset-0 bg-foreground/5 animate-pulse" aria-hidden="true" />
+                    <Image 
+                      src={src} 
+                      alt="UI" 
+                      fill 
+                      className="object-cover" 
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                    />
                   </div>
                 ))}
               </motion.div>
@@ -472,7 +487,16 @@ export function Footer() {
               >
                 {[...CAROUSEL_IMAGES.slice(Math.ceil(CAROUSEL_IMAGES.length / 2)), ...CAROUSEL_IMAGES.slice(Math.ceil(CAROUSEL_IMAGES.length / 2))].reverse().map((src, i) => (
                   <div key={`right-${i}`} className="relative w-full aspect-340/300 rounded-4xl overflow-hidden border border-foreground/5 bg-foreground/5 shrink-0">
-                    <Image src={src} alt="UI" fill className="object-cover" />
+                    <div className="absolute inset-0 bg-foreground/5 animate-pulse" aria-hidden="true" />
+                    <Image 
+                      src={src} 
+                      alt="UI" 
+                      fill 
+                      className="object-cover" 
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                    />
                   </div>
                 ))}
             </motion.div>

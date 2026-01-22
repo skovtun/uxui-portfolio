@@ -102,6 +102,9 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
             transition={{ duration: 1, ease: "easeOut" }}
             className="relative aspect-video rounded-4xl overflow-hidden border border-foreground/3 bg-foreground/5 shadow-2xl"
           >
+            {/* Skeleton loader */}
+            <div className="absolute inset-0 bg-foreground/5 animate-pulse" aria-hidden="true" />
+            
             <Image
               src={project.image}
               alt={`${project.title} - ${project.subtitle}`}
@@ -110,6 +113,8 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
               priority
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
               quality={90}
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
             />
             <div className="absolute inset-0 bg-linear-to-t from-background/40 to-transparent" aria-hidden="true" />
           </motion.div>
@@ -766,6 +771,7 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
                 className="group relative flex items-center gap-6 overflow-hidden rounded-3xl bg-linear-to-br from-foreground/3 to-transparent border border-foreground/5 hover:border-accent/30 transition-all hover:scale-[1.01] p-6 md:p-8 flex-row-reverse"
               >
                 <div className="relative w-32 h-20 md:w-40 md:h-24 shrink-0 overflow-hidden rounded-2xl aspect-video">
+                  <div className="absolute inset-0 bg-foreground/5 animate-pulse" aria-hidden="true" />
                   <Image
                     src={previousProject.image}
                     alt={`${previousProject.title} - ${previousProject.subtitle}`}
@@ -773,6 +779,9 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="160px"
                     quality={85}
+                    loading="lazy"
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                   />
                   <div className="absolute inset-0 bg-background/20 group-hover:bg-background/40 transition-all duration-500" />
                 </div>
@@ -798,6 +807,7 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
                 className="group relative flex items-center gap-6 overflow-hidden rounded-3xl bg-linear-to-br from-foreground/3 to-transparent border border-foreground/5 hover:border-accent/30 transition-all hover:scale-[1.01] p-6 md:p-8"
               >
                 <div className="relative w-32 h-20 md:w-40 md:h-24 shrink-0 overflow-hidden rounded-2xl aspect-video">
+                  <div className="absolute inset-0 bg-foreground/5 animate-pulse" aria-hidden="true" />
                   <Image
                     src={nextProject.image}
                     alt={`${nextProject.title} - ${nextProject.subtitle}`}
@@ -805,6 +815,9 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="160px"
                     quality={85}
+                    loading="lazy"
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                   />
                   <div className="absolute inset-0 bg-background/20 group-hover:bg-background/40 transition-all duration-500" />
                 </div>

@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/manifest.json",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://sergeikovtun.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://ux-ui.dev"),
   alternates: {
     canonical: "/",
   },
@@ -73,7 +73,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://sergeikovtun.com";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://ux-ui.dev";
 
   const personSchema = {
     "@context": "https://schema.org",

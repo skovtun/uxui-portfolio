@@ -317,48 +317,145 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
                 <BulletList items={project.approach} maxWidth="2xl" />
               </div>
 
-              {/* Research & Problem Definition - For GETTR */}
+              {/* Approach Sub-sections - For GETTR */}
               {project.slug === "social-platform" && (
-                <>
-                  <ImageWithCaption
-                    src="/images/case-studies/gettr-research.png"
-                    alt="GETTR Competitive and Product Research"
-                    caption="Competitive and product research covering leading social platforms. Used to identify proven interaction patterns, engagement mechanics, and UX risks relevant to rapid feature expansion."
-                    width={1200}
-                    height={800}
-                    quality={90}
-                  />
-                  <ImageWithCaption
-                    src="/images/case-studies/gettr-ux-research.png"
-                    alt="GETTR UX Research Artifacts"
-                    caption="UX research artifacts capturing user needs, engagement patterns, and friction points. Insights informed prioritization and design decisions across multiple feature initiatives."
-                    width={1200}
-                    height={800}
-                    quality={90}
-                  />
-                </>
-              )}
+                <div className="space-y-12 md:space-y-16">
+                  {/* UX Research & Competitive Analysis */}
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                      UX Research & Competitive Analysis
+                    </h3>
+                    <p className="text-foreground/50 leading-relaxed mb-6">
+                      To ground design decisions in real-world context, I conducted continuous UX research and competitive analysis.
+                    </p>
+                    <p className="text-foreground/50 leading-relaxed mb-6">
+                      The following (and many other) applications were constantly analyzed to understand patterns, expectations, and emerging trends in large-scale social platforms.
+                    </p>
+                    <p className="text-foreground/50 leading-relaxed mb-6">
+                      Research outputs informed:
+                    </p>
+                    <BulletList 
+                      items={[
+                        "Feature prioritization",
+                        "Interaction models",
+                        "Content discovery patterns",
+                        "Engagement and retention mechanics"
+                      ]} 
+                      maxWidth="2xl"
+                    />
+                    <div className="mt-8 space-y-6">
+                      <ImageWithCaption
+                        src="/images/case-studies/gettr-research.png"
+                        alt="GETTR Competitive and Product Research"
+                        caption="Competitive and product research covering leading social platforms. Used to identify proven interaction patterns, engagement mechanics, and UX risks relevant to rapid feature expansion."
+                        width={1200}
+                        height={800}
+                        quality={90}
+                      />
+                      <ImageWithCaption
+                        src="/images/case-studies/gettr-ux-research.png"
+                        alt="GETTR UX Research Artifacts"
+                        caption="UX research artifacts capturing user needs, engagement patterns, and friction points. Insights informed prioritization and design decisions across multiple feature initiatives."
+                        width={1200}
+                        height={800}
+                        quality={90}
+                      />
+                    </div>
+                  </div>
 
-              {/* UX Exploration & Iteration - For GETTR */}
-              {project.slug === "social-platform" && (
-                <>
-                  <ImageWithCaption
-                    src="/images/case-studies/gettr-wireframes.png"
-                    alt="GETTR Wireframe Exploration"
-                    caption="Early wireframe exploration for core and new features. Part of 300+ wireframes created to validate information architecture, interaction models, and edge cases before high-fidelity design."
-                    width={1200}
-                    height={800}
-                    quality={90}
-                  />
-                  <ImageWithCaption
-                    src="/images/case-studies/gettr-wireframes-2.png"
-                    alt="GETTR Extended Wireframe Sets"
-                    caption="Extended wireframe sets supporting 42 user flows. Enabled rapid iteration and alignment across product, design, and engineering under tight timelines."
-                    width={1200}
-                    height={800}
-                    quality={90}
-                  />
-                </>
+                  {/* UX Design Execution */}
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                      UX Design Execution
+                    </h3>
+                    <p className="text-foreground/50 leading-relaxed mb-6">
+                      The design process involved a high volume of structured UX work:
+                    </p>
+                    <BulletList 
+                      items={[
+                        "42 detailed user flows covering new and existing features",
+                        "300+ wireframes to explore layouts, states, and edge cases",
+                        "Iterative refinement based on internal reviews and stakeholder feedback"
+                      ]} 
+                      maxWidth="2xl"
+                    />
+                    <p className="text-foreground/50 leading-relaxed mt-6 mb-8">
+                      This foundation ensured that high-fidelity design decisions were well-validated before visual execution.
+                    </p>
+                    <div className="space-y-6">
+                      <ImageWithCaption
+                        src="/images/case-studies/gettr-wireframes.png"
+                        alt="GETTR Wireframe Exploration"
+                        caption="Early wireframe exploration for core and new features. Part of 300+ wireframes created to validate information architecture, interaction models, and edge cases before high-fidelity design."
+                        width={1200}
+                        height={800}
+                        quality={90}
+                      />
+                      <ImageWithCaption
+                        src="/images/case-studies/gettr-wireframes-2.png"
+                        alt="GETTR Extended Wireframe Sets"
+                        caption="Extended wireframe sets supporting 42 user flows. Enabled rapid iteration and alignment across product, design, and engineering under tight timelines."
+                        width={1200}
+                        height={800}
+                        quality={90}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Design System */}
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                      Design System
+                    </h3>
+                    <p className="text-foreground/50 leading-relaxed mb-6">
+                      A critical part of the work was evolving the GETTR Design System to support scale.
+                    </p>
+                    <p className="text-foreground/50 leading-relaxed mb-6">
+                      The system was built using Atomic Design methodology and covered both Web and App platforms.
+                    </p>
+                    <p className="text-foreground/50 leading-relaxed mb-6">
+                      Key outcomes:
+                    </p>
+                    <BulletList 
+                      items={[
+                        "Standardized components and patterns across teams",
+                        "Improved design consistency and predictability",
+                        "Faster iteration cycles for new features",
+                        "A scalable foundation for long-term platform growth"
+                      ]} 
+                      maxWidth="2xl"
+                    />
+                    <p className="text-foreground/50 leading-relaxed mt-6 mb-8">
+                      The Design System became a central tool enabling parallel development without UX fragmentation.
+                    </p>
+                    <div className="space-y-6">
+                      <ImageWithCaption
+                        src="/images/case-studies/gettr-ui-kit.png"
+                        alt="GETTR Design System - Atomic Design"
+                        caption="GETTR design system built using Atomic Design methodology. Reusable components and design tokens enabled consistent UX across web and mobile while supporting rapid parallel development."
+                        width={1200}
+                        height={800}
+                        quality={90}
+                      />
+                      <ImageWithCaption
+                        src="/images/case-studies/gettr-workflow.png"
+                        alt="GETTR Design-to-Development Workflow"
+                        caption="Design-to-development workflow illustrating structured handoff, review, and governance processes that reduced coordination overhead and supported fast delivery."
+                        width={1200}
+                        height={800}
+                        quality={90}
+                      />
+                      <ImageWithCaption
+                        src="/images/case-studies/gettr-tasks.png"
+                        alt="GETTR Design Process and Task Coordination"
+                        caption="Design process and task coordination supporting simultaneous feature development while maintaining UX quality and system consistency."
+                        width={1200}
+                        height={800}
+                        quality={90}
+                      />
+                    </div>
+                  </div>
+                </div>
               )}
 
               {/* Research & Analysis - For 1inch */}
@@ -383,35 +480,6 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
                 </>
               )}
 
-              {/* Design System & Infrastructure - For GETTR */}
-              {project.slug === "social-platform" && (
-                <>
-                  <ImageWithCaption
-                    src="/images/case-studies/gettr-ui-kit.png"
-                    alt="GETTR Design System - Atomic Design"
-                    caption="GETTR design system built using Atomic Design methodology. Reusable components and design tokens enabled consistent UX across web and mobile while supporting rapid parallel development."
-                    width={1200}
-                    height={800}
-                    quality={90}
-                  />
-                  <ImageWithCaption
-                    src="/images/case-studies/gettr-workflow.png"
-                    alt="GETTR Design-to-Development Workflow"
-                    caption="Design-to-development workflow illustrating structured handoff, review, and governance processes that reduced coordination overhead and supported fast delivery."
-                    width={1200}
-                    height={800}
-                    quality={90}
-                  />
-                  <ImageWithCaption
-                    src="/images/case-studies/gettr-tasks.png"
-                    alt="GETTR Design Process and Task Coordination"
-                    caption="Design process and task coordination supporting simultaneous feature development while maintaining UX quality and system consistency."
-                    width={1200}
-                    height={800}
-                    quality={90}
-                  />
-                </>
-              )}
 
               {/* Design System Details - For 1inch */}
               {project.slug === "1inch" && (

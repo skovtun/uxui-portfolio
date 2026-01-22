@@ -223,58 +223,37 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
                 </>
               )}
 
-              {/* Results - For GETTR (Mobile-First) */}
+              {/* Results - For GETTR */}
               {project.slug === "social-platform" && (
                 <>
-                  {/* Promotional/hero image displayed without caption as visual introduction to the case study */}
-                  <div className="mb-6">
-                    <Image
-                      src="/images/case-studies/gettr-promo.png"
-                      alt="GETTR"
-                      width={1200}
-                      height={800}
-                      className="w-full h-auto"
-                      quality={90}
-                      loading="eager"
-                      priority
-                    />
-                  </div>
-                  <ImageWithCaption
-                    src="/images/case-studies/gettr-mobile-ui.png"
-                    alt="GETTR Mobile Interface - Mobile-First Design"
-                    caption="Mobile-first interface design supporting content discovery and engagement at scale. As the primary platform, mobile design established core interaction patterns and information architecture that informed web implementation, ensuring consistent experience across 5.5M users."
-                    width={1200}
-                    height={800}
-                    quality={90}
-                  />
                   <ImageWithCaption
                     src="/images/case-studies/gettr-web-1.png"
-                    alt="GETTR Web Interface - Redesigned Feed Experience"
-                    caption="Web interface redesigned based on mobile-first patterns, supporting content discovery and engagement at scale. Consistent navigation patterns and standardized components reduce cognitive load and enable faster feature development while maintaining UX quality."
-                    width={1200}
-                    height={800}
-                    quality={90}
-                  />
-                  <ImageWithCaption
-                    src="/images/case-studies/gettr-web-4.png"
-                    alt="GETTR Web Interface - Content Creation & Engagement"
-                    caption="Content creation and engagement features redesigned with consistent interaction patterns derived from mobile-first approach. This structure enables rapid feature shipping while preventing UX fragmentation across parallel development work."
+                    alt="GETTR Web Interface - Primary Feed and Core Social Interactions"
+                    caption="Primary web interface showcasing the redesigned feed and core social interactions. Demonstrates consistent navigation patterns, standardized components, and scalable information architecture across the platform."
                     width={1200}
                     height={800}
                     quality={90}
                   />
                   <ImageWithCaption
                     src="/images/case-studies/gettr-web-2.png"
-                    alt="GETTR Web Interface - Design System Implementation"
-                    caption="Design system implementation enabling cross-platform consistency from mobile-first foundation. Standardized components and design tokens reduce implementation time and maintain visual and behavioral alignment across mobile and web."
+                    alt="GETTR Web Interface - Feature Integration"
+                    caption="Additional web interface view highlighting how new features were integrated using shared interaction patterns and design system components, enabling rapid feature delivery without UX fragmentation."
                     width={1200}
                     height={800}
                     quality={90}
                   />
                   <ImageWithCaption
                     src="/images/case-studies/gettr-web-3.png"
-                    alt="GETTR Web Interface - Additional Features & Patterns"
-                    caption="Additional features demonstrating design system scalability built on mobile-first patterns. This structure supports multiple teams shipping features in parallel without UX drift, maintaining consistency across different product areas."
+                    alt="GETTR Web Interface - Expanded Feature Surface"
+                    caption="Expanded feature surface demonstrating how the platform supports parallel feature development while maintaining visual and behavioral consistency."
+                    width={1200}
+                    height={800}
+                    quality={90}
+                  />
+                  <ImageWithCaption
+                    src="/images/case-studies/gettr-mobile-ui.png"
+                    alt="GETTR Mobile Experience"
+                    caption="Mobile experience adapted from the shared design system, maintaining cross-platform consistency while respecting mobile interaction patterns and constraints."
                     width={1200}
                     height={800}
                     quality={90}
@@ -338,37 +317,43 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
                 <BulletList items={project.approach} maxWidth="2xl" />
               </div>
 
-              {/* Research & Analysis - For GETTR */}
+              {/* Research & Problem Definition - For GETTR */}
               {project.slug === "social-platform" && (
                 <>
                   <ImageWithCaption
                     src="/images/case-studies/gettr-research.png"
-                    alt="GETTR User Behavior Analysis & Competitive Benchmarking"
-                    caption="Pragmatic, time-boxed research focusing on engagement patterns and established social platform patterns. This analysis identified what patterns to adopt and what risks to avoid, informing design decisions under time pressure."
+                    alt="GETTR Competitive and Product Research"
+                    caption="Competitive and product research covering leading social platforms. Used to identify proven interaction patterns, engagement mechanics, and UX risks relevant to rapid feature expansion."
                     width={1200}
                     height={800}
                     quality={90}
                   />
                   <ImageWithCaption
                     src="/images/case-studies/gettr-ux-research.png"
-                    alt="GETTR UX Research - User Insights & Engagement Patterns"
-                    caption="UX research documentation informing the design of 42 user flows. The research prioritized interaction patterns and information architecture decisions with greatest impact, supporting rapid decision-making with partial data."
+                    alt="GETTR UX Research Artifacts"
+                    caption="UX research artifacts capturing user needs, engagement patterns, and friction points. Insights informed prioritization and design decisions across multiple feature initiatives."
                     width={1200}
                     height={800}
                     quality={90}
                   />
+                </>
+              )}
+
+              {/* UX Exploration & Iteration - For GETTR */}
+              {project.slug === "social-platform" && (
+                <>
                   <ImageWithCaption
                     src="/images/case-studies/gettr-wireframes.png"
-                    alt="GETTR Wireframes - Design Exploration & Iteration"
-                    caption="Wireframe exploration representing part of 300+ wireframes created as fast decision-making and alignment tools. These wireframes enabled rapid iteration and stakeholder alignment before committing to high-fidelity designs, reducing rework under time constraints."
+                    alt="GETTR Wireframe Exploration"
+                    caption="Early wireframe exploration for core and new features. Part of 300+ wireframes created to validate information architecture, interaction models, and edge cases before high-fidelity design."
                     width={1200}
                     height={800}
                     quality={90}
                   />
                   <ImageWithCaption
                     src="/images/case-studies/gettr-wireframes-2.png"
-                    alt="GETTR Wireframes - User Flow Exploration"
-                    caption="Additional wireframe sets demonstrating exploration of information architecture and interaction patterns. The wireframing process enabled early validation and identification of usability issues, ensuring design decisions were grounded in user needs and technical constraints."
+                    alt="GETTR Extended Wireframe Sets"
+                    caption="Extended wireframe sets supporting 42 user flows. Enabled rapid iteration and alignment across product, design, and engineering under tight timelines."
                     width={1200}
                     height={800}
                     quality={90}
@@ -398,13 +383,13 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
                 </>
               )}
 
-              {/* Design System Details - For GETTR */}
+              {/* Design System & Infrastructure - For GETTR */}
               {project.slug === "social-platform" && (
                 <>
                   <ImageWithCaption
                     src="/images/case-studies/gettr-ui-kit.png"
-                    alt="GETTR Design System - Atomic Design UI Kit"
-                    caption="Design system built using Atomic Design methodology as enabling infrastructure for delivery velocity. The system includes atoms, molecules, organisms, and templates with aligned design tokens, allowing multiple teams to ship features in parallel without UX drift."
+                    alt="GETTR Design System - Atomic Design"
+                    caption="GETTR design system built using Atomic Design methodology. Reusable components and design tokens enabled consistent UX across web and mobile while supporting rapid parallel development."
                     width={1200}
                     height={800}
                     quality={90}
@@ -412,15 +397,15 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
                   <ImageWithCaption
                     src="/images/case-studies/gettr-workflow.png"
                     alt="GETTR Design-to-Development Workflow"
-                    caption="Design-to-development workflow reducing handoff time and implementation drift. Structured processes for design review, component documentation, and engineering collaboration improved alignment and reduced rework under time pressure."
+                    caption="Design-to-development workflow illustrating structured handoff, review, and governance processes that reduced coordination overhead and supported fast delivery."
                     width={1200}
                     height={800}
                     quality={90}
                   />
                   <ImageWithCaption
                     src="/images/case-studies/gettr-tasks.png"
-                    alt="GETTR Design Process & Task Management"
-                    caption="Design process documentation enabling coordination across parallel feature development. This system reduces fragmentation and maintains design quality and consistency under tight timelines with multiple stakeholders."
+                    alt="GETTR Design Process and Task Coordination"
+                    caption="Design process and task coordination supporting simultaneous feature development while maintaining UX quality and system consistency."
                     width={1200}
                     height={800}
                     quality={90}

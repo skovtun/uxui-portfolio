@@ -142,59 +142,47 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     slug: "social-platform",
     title: "GETTR",
-    subtitle: "Social Media Platform — Web & Mobile Product Design",
+    subtitle: "Scalable Social Platform Design",
     year: "2022",
     image: "/images/projects/gettr.png",
-    overview: "Led product design for GETTR, a social media platform serving 5.5M active users. Owned end-to-end UX/UI design across web and mobile platforms, established scalable design system architecture, and delivered 42 user flows and 300+ wireframes to support rapid feature development while maintaining consistency and quality under tight timelines.",
-    context: "GETTR operated as a rapidly growing social media platform with 5.5M active users, requiring continuous UX and system-level decisions to support platform growth. As a mobile-first application, core interaction patterns and information architecture were established on mobile, then extended to web. The platform needed to ship multiple major features in parallel across web and mobile while preventing UX fragmentation. One of the main risks was UX degradation due to parallel feature development without a unified design foundation.",
-    role: "Senior Product Designer",
+    overview: "GETTR is a large-scale social media platform with over 5.5M users, built around rapid feature expansion and platform scalability.",
+    context: "GETTR was at an active growth stage, with aggressive product expansion across core social features and new engagement and monetization surfaces. The primary challenge was delivering multiple high-impact features in parallel under tight timelines, while maintaining UX consistency and avoiding fragmentation across the platform. Design decisions needed to scale across web and mobile surfaces, support fast iteration, and remain adaptable to evolving product and marketing requirements.",
+    role: "Senior Product Designer (Web Platform)",
     ownership: [
-      "Feature expansion: end-to-end UX/UI design for core social features across web and mobile platforms, including content creation, feed interaction, discovery, and engagement flows",
-      "UX stabilization: redesigned and standardized 42 user flows covering core social interactions to reduce fragmentation and improve consistency",
-      "Design system scalability: established Atomic Design methodology, expanded component libraries, and aligned web and mobile design tokens as prerequisite infrastructure for delivery velocity",
-      "Wireframing and rapid iteration: produced 300+ wireframes as fast decision-making and alignment tools for feature exploration, stakeholder alignment, and engineering handoff",
-      "Feature-level UX decisions: owned interaction patterns, information architecture, and visual hierarchy for major product releases under time constraints",
-      "Cross-platform consistency: ensured design alignment between web and mobile while respecting platform-specific patterns",
-      "Design-to-development handoff: established specifications, component documentation, and collaboration processes that reduced implementation drift"
+      "End-to-end UX design for core and new social platform features",
+      "UX strategy and execution under accelerated delivery timelines",
+      "Design system evolution, standardization, and governance",
+      "Ensuring UX consistency and scalability across parallel initiatives"
     ],
     collaboration: [
-      "Product Managers (feature requirements, prioritization, user metrics, business objectives)",
-      "Mobile Engineers (iOS/Android implementation constraints, performance considerations, platform-specific patterns)",
-      "Frontend Engineers (web component architecture, technical feasibility, implementation patterns)",
-      "Growth PMs (engagement metrics, A/B testing requirements, feature experimentation)",
-      "Marketing Designers (brand consistency, campaign integration, visual asset coordination)"
+      "Product Management — prioritization, scope definition, trade-offs",
+      "Engineering — feasibility, implementation constraints, delivery alignment",
+      "Marketing & Growth — feature adoption and rollout requirements"
     ],
-    problem: "The platform faced UX fragmentation as new features were introduced rapidly without a unified design foundation. Legacy design patterns were inconsistent across web and mobile, creating friction when shipping parallel feature work. Design-to-development handoff lacked clear specifications, leading to implementation drift and rework. The absence of a scalable design system slowed feature delivery and increased maintenance overhead. High delivery pressure, incomplete requirements, and multiple stakeholders created tension between speed and quality.",
+    problem: "Rapid feature development introduced several UX risks: fragmentation of interaction patterns across features, increased cognitive load due to inconsistent flows, design system limitations slowing parallel development, and high coordination cost between design, product, and engineering teams. Without structural changes, scaling feature delivery would degrade UX quality and execution speed.",
     keyIssues: [
-      "Inconsistent navigation patterns and interaction models across web and mobile platforms",
-      "Fragmented component usage leading to visual and behavioral inconsistencies",
-      "Design-to-development handoff inefficiencies causing implementation delays and quality issues",
-      "Limited design system coverage requiring custom design work for each feature",
-      "Risk of UX degradation due to parallel feature development without systematic foundation"
+      "Fragmentation of interaction patterns across features",
+      "Increased cognitive load due to inconsistent flows",
+      "Design system limitations slowing parallel development",
+      "High coordination cost between design, product, and engineering teams"
     ],
-    solution: "Established a scalable design system using Atomic Design methodology as enabling infrastructure, not parallel overhead. Created reusable component libraries for both web and mobile platforms with aligned design tokens. This system allowed multiple teams to ship features in parallel without UX drift. Redesigned core user flows with consistent interaction patterns and information architecture, balancing flexibility for feature-specific needs with standardization for speed and quality.",
+    solution: "The solution focused on enabling rapid feature delivery while preserving UX integrity: designed scalable UX frameworks for Livestreams, Short Video, Direct Messaging, Analytics, and Referral flows; improved usability and clarity of existing core social features; standardized interaction patterns to reduce cognitive load; aligned all new work with a shared design system foundation. The platform was able to evolve quickly without accumulating UX debt.",
     approach: [
-      "Synthesized conflicting inputs from product managers, growth teams, and marketing through continuous alignment rather than upfront consensus, prioritizing based on user impact and technical feasibility",
-      "Conducted pragmatic, time-boxed user behavior analysis through product analytics, identifying engagement patterns and friction points in core social loops",
-      "Performed competitive benchmarking focusing on established patterns from leading social platforms, identifying what to adopt and what risks to avoid",
-      "Audited existing design patterns across web and mobile, documenting inconsistencies and technical constraints to inform system architecture",
-      "Designed 42 user flows covering content creation, feed interaction, discovery, profile management, and engagement features, highlighting the complexity of social platform UX",
-      "Created 300+ wireframes as fast decision-making and alignment tools, exploring different approaches to information architecture, interaction patterns, and feature layouts before committing to high-fidelity designs",
-      "Established Atomic Design system architecture with atoms, molecules, organisms, and templates for scalable component organization",
-      "Developed design tokens for typography, spacing, color, and elevation that aligned web and mobile libraries, enabling cross-platform consistency",
-      "Built component libraries in Figma with variants, states, and documentation for engineering handoff, reducing implementation time",
-      "Made trade-off decisions balancing design quality, development speed, and platform constraints under time pressure, with partial data and incomplete requirements",
-      "Established design review processes and handoff workflows to improve design-engineering alignment and reduce rework"
+      "Consolidated inputs from user requests, stakeholders, marketing, and trend analysis",
+      "Conducted UX research and competitive analysis across leading social platforms",
+      "Designed and validated 42 user flows across new and existing features",
+      "Produced 300+ wireframes to explore information architecture, interaction models, and edge cases",
+      "Standardized decision-making to reduce ambiguity and rework",
+      "This approach enabled parallel execution without sacrificing UX coherence"
     ],
     impact: [
-      "Improved UX consistency across web and mobile platforms through standardized component libraries and design tokens, reducing visual and behavioral fragmentation",
-      "Accelerated feature delivery velocity by enabling component reuse and reducing time spent on repetitive design work",
-      "Enhanced design-engineering alignment through clearer specifications, component documentation, and collaborative review processes, reducing implementation drift",
-      "Reduced design-to-development handoff time by establishing structured workflows and documentation standards",
-      "Enabled multiple teams to ship features in parallel without UX drift through scalable design system infrastructure",
-      "Improved product maturity at scale (5.5M users) through systematic approach to design patterns and cross-platform consistency"
+      "Enabled faster feature delivery across multiple initiatives",
+      "Improved UX consistency across web and mobile experiences",
+      "Reduced design and engineering friction through shared patterns and components",
+      "Supported parallel development without sacrificing quality",
+      "Impact was validated through internal reviews, qualitative feedback, and team-wide evaluation"
     ],
-    reflection: "This project reinforced the importance of system thinking when designing at scale. Establishing a design system foundation early enabled the team to ship features faster while maintaining quality, but required upfront investment and ongoing governance. Working under tight timelines with multiple stakeholders and incomplete requirements taught me to make clear trade-offs between ideal design solutions and practical constraints. The experience of designing 42 flows and 300+ wireframes highlighted the value of rapid iteration and exploration as decision-making tools, not just deliverables. Balancing web and mobile design while respecting platform-specific patterns required careful consideration of user context and technical constraints. Key learnings included the importance of design system governance, the need for clear documentation in fast-moving environments, and how to maintain design quality while supporting rapid product development under pressure.",
+    reflection: "This project reinforced that at scale, design systems and process discipline are leverage, not overhead. When speed is critical, UX quality depends on systems that enable teams to move quickly without fragmentation. The experience closely mirrors Big Tech environments where success depends on balancing velocity, consistency, and long-term scalability.",
     areasOfEmphasis: [
       "Product Design",
       "Mobile",

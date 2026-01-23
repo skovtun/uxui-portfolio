@@ -313,24 +313,26 @@ export function BrandsSection() {
           </div>
         </motion.div>
   
-        <div className="flex flex-wrap justify-center items-center gap-16">
-          {BRANDS.map((brand) => (
-              <motion.div
-                key={brand.name}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                className="relative h-12 w-full max-w-[140px] opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-default"
-              >
-              <Image
-                src={brand.logo}
-                alt={brand.name}
-                fill
-                className="object-contain"
-                loading="lazy"
-              />
-            </motion.div>
-          ))}
+        <div className="max-w-[1000px] mx-auto">
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16">
+            {BRANDS.map((brand) => (
+                <motion.div
+                  key={brand.name}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  className="relative h-12 w-[140px] opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-default flex items-center justify-center"
+                >
+                <Image
+                  src={brand.logo}
+                  alt={brand.name}
+                  fill
+                  className="object-contain"
+                  loading="lazy"
+                />
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </Section>

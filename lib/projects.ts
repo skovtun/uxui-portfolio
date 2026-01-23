@@ -132,7 +132,7 @@ impact: [
   "Improvements were validated through product analytics, internal reviews, and qualitative feedback"
 ],
 
-reflection: "This project reinforced that in high-risk, data-dense systems like DeFi products, clarity and predictability are not aesthetic choices but functional requirements. Progressive disclosure and consistent interaction patterns play a critical role in building trust, reducing hesitation, and supporting confident decision-making.",
+reflection: "This case reinforced that in high-risk financial systems, UX clarity is not about simplicity but about predictable decision-making under uncertainty. Progressive disclosure and strong hierarchy directly impact trust, conversion, and long-term retention.",
 
 areasOfEmphasis: [
   "DeFi",

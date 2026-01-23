@@ -66,7 +66,7 @@ export function Hero() {
 
           <motion.div variants={itemVars} className="max-w-xl mb-6 xl:mb-7 mx-auto xl:mx-0">
             <p className="text-sm md:text-base text-foreground/60 leading-relaxed font-light mb-4 xl:mb-5">
-              Specializing in complex systems and data-heavy interfaces. I transform business goals into scalable, human-centered products that drive growth and clarity.
+              Building scalable systems for complex, high-risk products across DeFi, enterprise, and large-scale platforms — with a focus on system design, ownership, and UX clarity at scale.
             </p>
             
             <div className="flex flex-wrap gap-2 justify-center xl:justify-start">
@@ -81,7 +81,7 @@ export function Hero() {
             <motion.div variants={itemVars} className="flex flex-col sm:flex-row items-center xl:items-center gap-6 xl:gap-8 mb-8 xl:mb-0 w-full justify-center xl:justify-start">
               <a href="/#work" className="w-full sm:w-auto">
                 <button className="group relative flex items-center gap-4 px-10 py-5 bg-foreground text-background rounded-full font-bold uppercase tracking-widest text-[10px] overflow-hidden transition-transform hover:scale-[1.02] active:scale-95 w-full justify-center focus:outline-none focus-visible:ring-1 focus-visible:ring-accent/30 focus-visible:ring-offset-1">
-                  <span className="relative z-10">Explore Case Studies</span>
+                  <span className="relative z-10">View Selected Work</span>
                   <ArrowRight className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                   <div className="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" aria-hidden="true" />
                 </button>

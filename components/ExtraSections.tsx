@@ -166,12 +166,53 @@ export function BrandsSection() {
               EXPERIENCE ACROSS
             </SectionHeader>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 text-foreground/60 max-w-5xl mx-auto text-left leading-relaxed font-light">
-            <p className="text-sm md:text-base">
-              I&apos;m a senior UX/UI and product designer with 10+ years of experience working on complex, large-scale products across FinTech, Enterprise platforms, Web3, and Healthcare. I focus on designing clear, scalable systems for data-heavy and business-critical products, bridging user needs, technical constraints, and business goals.
-            </p>
-            <p className="text-sm md:text-base">
-              My background includes building design systems, dashboards, and core product interfaces in close collaboration with cross-functional teams. I approach design as a problem-solving discipline, aiming to reduce complexity and deliver solutions that work reliably at scale.
-            </p>
+            <div className="space-y-6 text-sm md:text-base">
+              <p>
+                I&apos;m a Senior Product Designer with 10+ years of experience designing complex web platforms, enterprise systems, and DeFi products.
+              </p>
+              <p>
+                I specialize in system-level UX, scalable design foundations, and high-risk user flows where clarity, trust, and predictability directly impact business outcomes.
+              </p>
+              <p>
+                I&apos;ve worked on products used by millions of users, collaborating closely with product, engineering, and analytics teams.
+              </p>
+            </div>
+            
+            <div className="text-sm md:text-base">
+              <h3 className="text-lg font-semibold text-foreground mb-6">What I focus on:</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-4">
+                  <div className="h-5 w-5 rounded-full border border-accent/20 flex items-center justify-center shrink-0 mt-0.5">
+                    <CheckCircle2 className="h-3 w-3 text-accent" />
+                  </div>
+                  <span>Designing scalable UX systems</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="h-5 w-5 rounded-full border border-accent/20 flex items-center justify-center shrink-0 mt-0.5">
+                    <CheckCircle2 className="h-3 w-3 text-accent" />
+                  </div>
+                  <span>Reducing cognitive load in complex products</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="h-5 w-5 rounded-full border border-accent/20 flex items-center justify-center shrink-0 mt-0.5">
+                    <CheckCircle2 className="h-3 w-3 text-accent" />
+                  </div>
+                  <span>Ownership of critical user flows</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="h-5 w-5 rounded-full border border-accent/20 flex items-center justify-center shrink-0 mt-0.5">
+                    <CheckCircle2 className="h-3 w-3 text-accent" />
+                  </div>
+                  <span>Design systems as product enablers</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="h-5 w-5 rounded-full border border-accent/20 flex items-center justify-center shrink-0 mt-0.5">
+                    <CheckCircle2 className="h-3 w-3 text-accent" />
+                  </div>
+                  <span>Collaboration with engineering and analytics</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </motion.div>
   

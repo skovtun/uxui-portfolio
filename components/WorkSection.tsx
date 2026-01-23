@@ -18,11 +18,11 @@ const PROJECTS = CASE_STUDIES.map((project) => {
     "social-platform": "small"
   };
 
-  // Map slugs to descriptions (can be updated if needed)
+  // Map slugs to descriptions (short, scannable, with scale and impact)
   const descriptionMap: Record<string, string> = {
-    "empower": project.overview,
-    "1inch": project.overview,
-    "social-platform": project.overview
+    "empower": "Built and scaled an enterprise design system across multiple financial products, reducing handoff time from weeks to days",
+    "1inch": "Redesigned high-risk DeFi swap flows serving millions of transactions, reducing cognitive load and improving transaction confidence",
+    "social-platform": "Led UX and design system evolution for a 5.5M+ user social platform, enabling parallel feature delivery while maintaining consistency"
   };
 
   // Map slugs to categories

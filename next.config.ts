@@ -25,6 +25,13 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Target modern browsers to reduce legacy JavaScript polyfills
+  compiler: {
+    // Remove console.log in production
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn'],
+    } : false,
+  },
   // outputFileTracingRoot: path.resolve(__dirname, '../../'), // Commented out for Vercel deployment
   typescript: {
     ignoreBuildErrors: true,

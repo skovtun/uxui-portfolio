@@ -3,29 +3,37 @@
 import { motion, Variants } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import { prefersReducedMotion } from "@/lib/motion";
 const meImage = "/images/sergei-kovtun.png";
 
 const BADGES = ["FinTech", "AI", "Web3", "SaaS", "Healthcare", "Dashboards", "Design Systems"];
 
 export function Hero() {
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    setReducedMotion(prefersReducedMotion());
+  }, []);
+
   const containerVars: Variants = {
-    initial: { opacity: 0 },
+    initial: reducedMotion ? { opacity: 1 } : { opacity: 0 },
     animate: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.3,
+      transition: reducedMotion ? { duration: 0 } : {
+        staggerChildren: 0.05,
+        delayChildren: 0.1,
       },
     },
   };
 
   const itemVars: Variants = {
-    initial: { y: 100, opacity: 0 },
+    initial: reducedMotion ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 },
     animate: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 1,
+      transition: reducedMotion ? { duration: 0 } : {
+        duration: 0.6,
         ease: "easeOut",
       },
     },
@@ -41,6 +49,7 @@ export function Hero() {
           initial="initial"
           animate="animate"
           className="relative z-10 w-full grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-16 items-center max-w-[1600px] mx-auto pt-8 xl:pt-0"
+          style={{ willChange: 'auto' }}
         >
         <div className="xl:col-span-1 py-2 flex flex-col items-center xl:items-start text-center xl:text-left">
           <div className="mb-4 overflow-hidden">
@@ -57,7 +66,8 @@ export function Hero() {
               <div className="flex flex-col gap-2 mb-4 xl:mb-5 w-full">
                       <motion.h1 
                         variants={itemVars}
-                            className="text-[14vw] xs:text-[50px] md:text-[11vw] lg:text-[10vw] xl:text-[6.5vw] font-bold leading-[0.9] tracking-tight pb-2"
+                        initial={false}
+                        className="text-[14vw] xs:text-[50px] md:text-[11vw] lg:text-[10vw] xl:text-[6.5vw] font-bold leading-[0.9] tracking-tight pb-2"
                       >
                     CRAFTING <span className="font-serif italic font-normal text-accent/80">Digital</span> <br />
                     EXPERIENCES

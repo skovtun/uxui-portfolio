@@ -111,18 +111,18 @@ const TESTIMONIALS = [
     linkedin: "https://www.linkedin.com/in/shahabbokhari"
   },
   {
-    text: "Sergei and I have worked on multiple projects together here at Quotit (National General). Sergei's natural ability to dissect a problem and work through ambiguities has been a big asset to our team. He is able to grasp a proposed vision quickly and run with it. Aside from his top notch design skills, what really makes him shine is his ability to think big. Sergei is constantly thinking about the customer experience and finding new ways to innovate. Many of my projects have been initiated by Sergei's insights, where he has been able to take a simple observation and craft an entire customer strategy for us to implement. H has single-handedly driven incremental revenue for us just through his ability to think strategically and act on it.",
-    author: "Shirin Isadvastar",
-    role: "Senior UX Designer @ National General Insurance",
-    avatar: "https://media.licdn.com/dms/image/v2/D4D03AQFIokxzgvynEQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1699318924278?e=1770249600&v=beta&t=dmerGIRGTPY9TawPebSm2slvXTdJDM8tHkC3j_DceTQ",
-    linkedin: "https://www.linkedin.com/in/shirin-isadvastar-79050a7"
-  },
-  {
     text: "I had the pleasure of working closely with Sergei. Sergei initially joined our team as a UX designer, but he quickly demonstrated great ability to adapt and learn.One of Sergei's most impressive achievements was his rapid mastery of React and front-end development. Not only did he design impeccable UI mock-ups, but he also took the initiative to dive into front-end development, seamlessly implementing his designs. His contributions have been invaluable to our team, and I have no doubt that he will excel in any endeavor he undertakes. It's been a pleasure working alongside Sergei, and I wholeheartedly endorse him for any role that requires either UX design or front-end development expertise.",
     author: "Stephen Wang",
     role: "SDE @ Amazon",
     avatar: "https://media.licdn.com/dms/image/v2/D5603AQF8fyYg1GCHcw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1696964764346?e=1770249600&v=beta&t=xXahw7xk4tfpGVtQX3Xs-0WvOf7IGEstR8ZTr_Y1Vu4",
     linkedin: "https://www.linkedin.com/in/sirui-wang-634b0a152"
+  },
+  {
+    text: "Sergei and I have worked on multiple projects together here at Quotit (National General). Sergei's natural ability to dissect a problem and work through ambiguities has been a big asset to our team. He is able to grasp a proposed vision quickly and run with it. Aside from his top notch design skills, what really makes him shine is his ability to think big. Sergei is constantly thinking about the customer experience and finding new ways to innovate. Many of my projects have been initiated by Sergei's insights, where he has been able to take a simple observation and craft an entire customer strategy for us to implement. H has single-handedly driven incremental revenue for us just through his ability to think strategically and act on it.",
+    author: "Shirin Isadvastar",
+    role: "Senior UX Designer @ National General Insurance",
+    avatar: "https://media.licdn.com/dms/image/v2/D4D03AQFIokxzgvynEQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1699318924278?e=1770249600&v=beta&t=dmerGIRGTPY9TawPebSm2slvXTdJDM8tHkC3j_DceTQ",
+    linkedin: "https://www.linkedin.com/in/shirin-isadvastar-79050a7"
   },
   {
     text: "I worked with Sergei at 1inch.io in different departments, but we had common tasks - Sergei demonstrated himself as a highly qualified specialist, focused on optimizing processes and improving user experience. Sergei has a good understanding of the principles of modern user interface design and has made a significant contribution to the development of the project. I would like to emphasize Sergei's high leadership qualities - he is able to teach and lead.",
@@ -132,11 +132,11 @@ const TESTIMONIALS = [
     linkedin: "https://www.linkedin.com/in/mikhail-naiko-31929528"
   },
   {
-    text: "Sergei is one of the most driven, focused, and experienced team members I have ever worked with. His attention to detail and ability to problem solve different issues is unparalleled. Sergei's ability to provide viable working solutions to my team in a timely manner was incredible. Without a doubt, Sergei will be an absolute asset to any business that looks to bring him on board.",
-    author: "Steven Derksen",
-    role: "Senior Sales Consultant @ Quotit Corporation",
-    avatar: "https://media.licdn.com/dms/image/v2/C5103AQEPm6RmGYRt-A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1516936598197?e=1770249600&v=beta&t=mzKEsKwiala-dWbSWat74SBjAWswdIYn9yRsvk2qnhA",
-    linkedin: "https://www.linkedin.com/in/stevenderksen"
+    text: "Sergei is an energetic contributor and team player with a strong skillset in both UI/UX design and UI development. He pays attention to detail, consistently shows an eagerness to help out where the help is most needed—He also has a cheerful demeanor about him that was infectious. We will miss him.",
+    author: "Timothy Long",
+    role: "Senior Front-End Developer @ Allstate",
+    avatar: "https://media.licdn.com/dms/image/v2/C5603AQFgp8jxd0tsrw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1659380073903?e=1770854400&v=beta&t=bjzV5pQZrkSUkfF_vc4kWMEDg25uMJrortCf41GXTe4",
+    linkedin: "https://www.linkedin.com/in/timothydavidlong/"
   },
   {
     text: "Working with Sergei at Gettr was awesome. He was a Senior UX/UI Designer for our desktop and mobile apps, and he really knows his stuff. Sergei made our apps easy to use and look great. It's not just about making things look pretty for him; it's about making them work well for our users. What's really cool about Sergei is not just his skills but how he is with people. He listens, really listens, and his ideas always make our work better. He's always learning new things and making sure our apps are the best they can be. But more than that, Sergei is just a great guy to have on the team. He's positive, works well with everyone, and always keeps us moving forward. Any team would be lucky to have him. He's not just about making great designs; he makes the team better, too.",

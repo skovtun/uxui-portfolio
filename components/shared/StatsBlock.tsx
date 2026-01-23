@@ -21,7 +21,7 @@ export function StatsBlock({ items, className }: StatsBlockProps) {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       className={cn(
-        "grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 p-8 md:p-12 rounded-3xl bg-linear-to-br from-foreground/3 to-transparent border border-foreground/5",
+        "grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 p-4 md:p-6",
         className
       )}
     >

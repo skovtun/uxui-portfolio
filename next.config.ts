@@ -36,16 +36,18 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  turbopack: {
-    rules: {
-      "*.{jsx,tsx}": {
-        loaders: [LOADER]
+  // Turbopack configuration - only for development
+  // Note: Turbopack may have issues with dynamic routes in production builds
+  // If build fails, remove this section
+  ...(process.env.NODE_ENV === 'development' ? {
+    turbopack: {
+      rules: {
+        "*.{jsx,tsx}": {
+          loaders: [LOADER]
+        }
       }
     }
-  }
+  } : {})
 };
 
 export default nextConfig;

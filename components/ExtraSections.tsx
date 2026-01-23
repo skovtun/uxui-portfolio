@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import NextLink from "next/link";
 import { ArrowUpRight, Quote, CheckCircle2, Download, Linkedin, Instagram } from "lucide-react";
@@ -16,6 +17,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 
 const EXPERIENCE = [
@@ -147,10 +149,105 @@ const TESTIMONIALS = [
   }
 ];
 
+function TestimonialsCarousel() {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
+  return (
+    <>
+      <Carousel
+        setApi={setApi}
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        className="w-full"
+      >
+        <CarouselContent className="-ml-2 md:-ml-4">
+          {TESTIMONIALS.map((testimonial, index) => (
+            <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/2">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="relative p-8 md:p-12 rounded-[2.5rem] bg-linear-to-br from-foreground/3 to-transparent border border-foreground/5 h-full flex flex-col overflow-hidden"
+              >
+                <Quote className="absolute -top-4 -right-4 h-16 w-16 text-accent/5 rotate-12 pointer-events-none" />
+            
+                <div className="relative z-10 flex flex-col h-full">
+                  <p className="text-base md:text-lg font-light italic leading-[1.4] text-foreground/80 mb-8 grow">
+                    {testimonial.text}
+                  </p>
+                  
+                  <div className="flex items-center gap-6">
+                    <a 
+                      href={testimonial.linkedin} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="h-16 w-16 rounded-full overflow-hidden relative ring-4 ring-accent/10 shrink-0 hover:ring-accent/20 transition-all"
+                    >
+                      <Image
+                        src={testimonial.avatar}
+                        alt={testimonial.author}
+                        fill
+                        className="object-cover"
+                        loading="lazy"
+                        placeholder="blur"
+                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                      />
+                    </a>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="text-xl font-bold tracking-tight truncate">{testimonial.author}</h4>
+                      <p className="text-[10px] text-accent font-bold uppercase tracking-[0.2em] mt-1 line-clamp-2">
+                        {testimonial.role}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="hidden md:flex -left-12" />
+        <CarouselNext className="hidden md:flex -right-12" />
+      </Carousel>
+      
+      {/* Mobile indicators */}
+      <div className="flex items-center justify-center gap-2 mt-8 md:hidden">
+        {Array.from({ length: count }).map((_, index) => (
+          <button
+            key={index}
+            onClick={() => api?.scrollTo(index)}
+            className={`h-2 rounded-full transition-all duration-300 ${
+              index === current
+                ? "w-8 bg-accent"
+                : "w-2 bg-foreground/20"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    </>
+  );
+}
+
 export function BrandsSection() {
   return (
     <Section id="about">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1600px] mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -242,9 +339,10 @@ export function BrandsSection() {
 
 export function AboutSection() {
   return (
-    <section id="experience" className="bg-background text-foreground">
-      {/* Philosophy & Emphasis */}
-        <div className="px-6 md:px-16 py-16 grid grid-cols-1 lg:grid-cols-12 gap-16 relative overflow-hidden">
+    <>
+      <Section id="experience" className="bg-background text-foreground">
+        {/* Philosophy & Emphasis */}
+        <div className="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 relative overflow-hidden">
           <div className="absolute top-1/2 left-0 w-32 h-64 bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
           
           <div className="lg:col-span-6 relative z-10 flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -301,10 +399,11 @@ export function AboutSection() {
             </div>
           </div>
         </div>
+      </Section>
 
-        {/* Proficiency Grid */}
-        <Section background="subtle">
-          <div className="max-w-7xl mx-auto relative z-10">
+      {/* Proficiency Grid */}
+      <Section background="subtle">
+          <div className="max-w-[1600px] mx-auto relative z-10">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -332,7 +431,7 @@ export function AboutSection() {
               </SectionHeader>
             </motion.div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-8 lg:gap-16">
               {PROFICIENCY.map((p, i) => (
                 <motion.div
                   key={p.title}
@@ -340,9 +439,9 @@ export function AboutSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                    className="p-12 rounded-[2.5rem] bg-background border border-foreground/5 flex flex-col items-center lg:items-start text-center lg:text-left"
+                    className="p-12 rounded-[2.5rem] bg-background border border-foreground/5 flex flex-col items-center lg:items-start text-center lg:text-left mb-4 md:mb-0"
                 >
-                    <h3 className="text-3xl md:text-4xl xl:text-[3vw] font-bold mb-16 transition-colors tracking-tight">{p.title}</h3>
+                    <h3 className="text-3xl md:text-4xl font-bold mb-16 transition-colors tracking-tight" style={{ fontSize: 'clamp(1.875rem, 3vw, 3rem)' }}>{p.title}</h3>
                   <ul className="space-y-6">
                     {p.items.map((item) => (
                       <li key={item} className="flex flex-col lg:flex-row items-center lg:items-start gap-5 text-foreground/60 leading-relaxed font-light">
@@ -361,7 +460,7 @@ export function AboutSection() {
 
         {/* Testimonials Carousel */}
         <Section>
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-[1600px] mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -385,65 +484,12 @@ export function AboutSection() {
               </a>
             </motion.div>
 
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              className="w-full"
-            >
-              <CarouselContent className="-ml-2 md:-ml-4">
-                {TESTIMONIALS.map((testimonial, index) => (
-                  <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/2">
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 }}
-                      className="relative p-8 md:p-12 rounded-[2.5rem] bg-linear-to-br from-foreground/3 to-transparent border border-foreground/5 h-full flex flex-col overflow-hidden"
-                    >
-                      <Quote className="absolute -top-4 -right-4 h-16 w-16 text-accent/5 rotate-12 pointer-events-none" />
-                
-                      <div className="relative z-10 flex flex-col h-full">
-                        <p className="text-base md:text-lg font-light italic leading-[1.4] text-foreground/80 mb-8 grow">
-                          {testimonial.text}
-                        </p>
-                        
-                        <div className="flex items-center gap-6">
-                          <a 
-                            href={testimonial.linkedin} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="h-16 w-16 rounded-full overflow-hidden relative ring-4 ring-accent/10 shrink-0 hover:ring-accent/20 transition-all"
-                          >
-                            <Image
-                              src={testimonial.avatar}
-                              alt={testimonial.author}
-                              fill
-                              className="object-cover"
-                              loading="lazy"
-                              placeholder="blur"
-                              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                            />
-                          </a>
-                          <div className="flex-1 min-w-0">
-                            <h4 className="text-xl font-bold tracking-tight truncate">{testimonial.author}</h4>
-                            <p className="text-[10px] text-accent font-bold uppercase tracking-[0.2em] mt-1 line-clamp-2">
-                              {testimonial.role}
-                            </p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="hidden md:flex left-4" />
-              <CarouselNext className="hidden md:flex right-4" />
-            </Carousel>
+            <div className="relative">
+              <TestimonialsCarousel />
+            </div>
           </div>
         </Section>
-      </section>
+    </>
   );
 }
 
@@ -452,7 +498,7 @@ export function Footer() {
     <footer id="contact" className="px-6 md:px-16 pt-16 pb-4 bg-background text-foreground overflow-hidden relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-foreground/5 to-transparent" />
       
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-[1600px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16 items-center">
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
             <motion.div 

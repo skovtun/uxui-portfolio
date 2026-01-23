@@ -40,8 +40,8 @@ export function Navbar() {
         scrolled ? "py-4" : "py-8"
       }`}
     >
-        <div className="max-w-[1600px] mx-auto px-6 md:px-16">
-          <div className={`relative flex items-center justify-between px-8 py-4 rounded-full transition-all duration-500 ${
+        <div className="w-full px-6 md:px-16">
+          <div className={`max-w-[1600px] mx-auto relative flex items-center justify-between px-4 md:px-6 py-4 rounded-full transition-all duration-500 ${
             scrolled ? "glass shadow-2xl shadow-black/10" : "bg-transparent"
           }`}>
             <Link href="/">

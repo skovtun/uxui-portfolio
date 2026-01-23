@@ -19,8 +19,8 @@ export function SectionHeader({
   size = "default",
 }: SectionHeaderProps) {
   const sizeClasses = {
-    large: "text-5xl md:text-[7vw] lg:text-[6.5vw] xl:text-[5vw]",
-    default: "text-3xl md:text-4xl lg:text-5xl xl:text-6xl",
+    large: "text-5xl md:text-6xl lg:text-7xl",
+    default: "text-3xl md:text-4xl lg:text-5xl",
   };
   
   const baseClasses = `${sizeClasses[size]} font-bold tracking-tight leading-[0.9] text-foreground`;
@@ -31,7 +31,10 @@ export function SectionHeader({
     centered: "mb-16 text-center lg:text-left uppercase",
   };
 
-  const fontSizeStyle = size === "large" ? undefined : { fontSize: 'clamp(2rem, 4vw, 3.5rem)' };
+  // Maximum font sizes with clamp for responsive scaling
+  const fontSizeStyle = size === "large" 
+    ? { fontSize: 'clamp(3rem, 5vw, 6rem)' } // 48px - 96px
+    : { fontSize: 'clamp(1.875rem, 3vw, 3rem)' }; // 30px - 48px
 
   return (
     <Component 

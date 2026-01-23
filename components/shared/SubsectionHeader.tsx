@@ -15,11 +15,14 @@ export function SubsectionHeader({
   size = "default",
 }: SubsectionHeaderProps) {
   const sizeClasses = {
-    large: "text-3xl md:text-4xl xl:text-[3vw]",
-    default: "text-2xl md:text-3xl lg:text-3xl xl:text-4xl",
+    large: "text-3xl md:text-4xl",
+    default: "text-2xl md:text-3xl",
   };
 
-  const fontSizeStyle = size === "large" ? undefined : { fontSize: 'clamp(1.5rem, 2.5vw, 2.25rem)' };
+  // Maximum font sizes with clamp for responsive scaling
+  const fontSizeStyle = size === "large" 
+    ? { fontSize: 'clamp(1.875rem, 3vw, 3rem)' } // 30px - 48px
+    : { fontSize: 'clamp(1.5rem, 2.5vw, 2.25rem)' }; // 24px - 36px
 
   return (
     <Component 

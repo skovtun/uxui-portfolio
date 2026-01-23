@@ -112,7 +112,7 @@ function ProjectCard({ project, index, isLast }: { project: typeof PROJECTS[0], 
               className="group/heading block transition-colors hover:text-accent focus:outline-none focus-visible:ring-1 focus-visible:ring-accent/30 focus-visible:ring-offset-1 rounded-lg p-2 -ml-2"
               aria-label={`View case study: ${project.title}`}
             >
-              <h3 className="text-3xl md:text-4xl xl:text-[3vw] font-bold tracking-tight text-foreground leading-tight transition-colors group-hover/heading:text-accent">
+              <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground leading-tight transition-colors group-hover/heading:text-accent" style={{ fontSize: 'clamp(1.875rem, 3vw, 3rem)' }}>
               {project.title} — <br />
                 <span className="font-serif italic font-normal text-foreground/50 transition-colors group-hover/heading:text-foreground/70">{project.category}</span>
             </h3>
@@ -156,9 +156,10 @@ export function WorkSection() {
 
   return (
     <Section id="work" className="relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-accent/5 blur-[120px] rounded-full -translate-y-1/2 pointer-events-none" />
+      <div className="max-w-[1600px] mx-auto relative">
+        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-accent/5 blur-[120px] rounded-full -translate-y-1/2 pointer-events-none" />
       
-      <div className="flex flex-col mb-[72px] md:mb-[96px] relative z-10 items-center xl:items-start text-center xl:text-left">
+        <div className="flex flex-col mb-[72px] md:mb-[96px] relative z-10 items-center xl:items-start text-center xl:text-left">
         <motion.div 
           initial={{ opacity: 0, y: reducedMotion ? 0 : 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -199,8 +200,9 @@ export function WorkSection() {
 
       <div className="flex flex-col relative z-10">
         {PROJECTS.map((project, index) => (
-          <ProjectCard key={project.title} project={project} index={index} isLast={index === PROJECTS.length - 1} />
+            <ProjectCard key={project.title} project={project} index={index} isLast={index === PROJECTS.length - 1} />
         ))}
+        </div>
       </div>
     </Section>
   );

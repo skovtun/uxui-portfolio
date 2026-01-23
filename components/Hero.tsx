@@ -70,7 +70,8 @@ export function Hero() {
                       <motion.h1 
                         variants={itemVars}
                         initial={false}
-                        className="text-[14vw] xs:text-[50px] md:text-[11vw] lg:text-[10vw] xl:text-[6.5vw] font-bold leading-[0.9] tracking-tight pb-2"
+                        className="font-bold leading-[0.9] tracking-tight pb-2"
+                        style={{ fontSize: 'clamp(2.5rem, 8vw, 7.5rem)' }}
                       >
                     CRAFTING <span className="font-serif italic font-normal text-accent/80">Digital</span> <br />
                     EXPERIENCES

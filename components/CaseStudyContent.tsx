@@ -119,8 +119,8 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
       </section>
 
       {/* Content Section with Sticky Sidebar - Wrapper extends to Footer */}
-      <div className="relative">
-        <Section padding="large" borderTop>
+      <div className="relative overflow-visible">
+        <Section padding="large" borderTop className="overflow-visible">
           <div className="max-w-[1600px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-24">
               {/* Main Content */}
@@ -772,7 +772,7 @@ export function CaseStudyContent({ project }: CaseStudyContentProps) {
 
               {/* Sidebar / Details - Sticky until Footer */}
               <aside className="lg:col-span-5">
-                <div className="lg:sticky lg:top-28 lg:h-fit">
+                <div className="lg:sticky lg:top-32 lg:self-start lg:h-fit">
                   <SidebarInfo
                     title="Role & Ownership"
                     items={[

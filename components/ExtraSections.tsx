@@ -290,10 +290,10 @@ export function AboutSection() {
                         className="py-8 border-b border-foreground/5 flex flex-col sm:flex-row justify-between items-center sm:items-baseline text-center sm:text-left"
                     >
                       <div className="mb-4 sm:mb-0">
-                        <h4 className="text-2xl font-bold tracking-tight">{exp.company}</h4>
+                        <h3 className="text-2xl font-bold tracking-tight">{exp.company}</h3>
                         <p className="text-sm text-foreground/50 mt-1 font-light">{exp.role}</p>
                       </div>
-                      <span className="text-xs font-bold tabular-nums text-foreground/40 tracking-widest">{exp.period}</span>
+                      <span className="text-xs font-bold tabular-nums text-foreground/50 tracking-widest">{exp.period}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -544,7 +544,7 @@ export function Footer() {
       <div className="pt-16 border-t border-foreground/5 flex flex-col md:flex-row items-center md:items-start justify-between gap-12">
         <div className="flex flex-col items-center md:items-start gap-6">
           <div className="text-3xl font-bold tracking-tight">SK<span className="text-accent">.</span></div>
-          <p className="text-[10px] uppercase tracking-[0.3em] text-foreground/50 font-bold max-w-[240px] leading-relaxed text-center md:text-left">
+          <p className="text-[10px] uppercase tracking-[0.3em] text-foreground/60 font-bold max-w-[240px] leading-relaxed text-center md:text-left">
             Sergei Kovtun — UX/UI & Product Designer & Creative Strategist
           </p>
         </div>
@@ -571,26 +571,27 @@ export function Footer() {
           
           <div className="flex flex-wrap items-center justify-center md:justify-end gap-4">
             <div className="flex items-center gap-4">
-              <a href="https://www.linkedin.com/in/sergeikovtun/" target="_blank" rel="noopener noreferrer" className="group p-3 rounded-full border border-foreground/10 hover:border-accent hover:text-accent hover:bg-accent/5 transition-all hover:scale-110">
-                <Linkedin className="h-4 w-4 transition-transform group-hover:scale-110" />
+              <a href="https://www.linkedin.com/in/sergeikovtun/" target="_blank" rel="noopener noreferrer" aria-label="Visit Sergei Kovtun's LinkedIn profile" className="group p-3 rounded-full border border-foreground/10 hover:border-accent hover:text-accent hover:bg-accent/5 transition-all hover:scale-110">
+                <Linkedin className="h-4 w-4 transition-transform group-hover:scale-110" aria-hidden="true" />
               </a>
-              <a href="https://www.instagram.com/ux__ui.designer/" target="_blank" rel="noopener noreferrer" className="group p-3 rounded-full border border-foreground/10 hover:border-accent hover:text-accent hover:bg-accent/5 transition-all hover:scale-110">
-                <Instagram className="h-4 w-4 transition-transform group-hover:scale-110" />
+              <a href="https://www.instagram.com/ux__ui.designer/" target="_blank" rel="noopener noreferrer" aria-label="Visit Sergei Kovtun's Instagram profile" className="group p-3 rounded-full border border-foreground/10 hover:border-accent hover:text-accent hover:bg-accent/5 transition-all hover:scale-110">
+                <Instagram className="h-4 w-4 transition-transform group-hover:scale-110" aria-hidden="true" />
               </a>
-              <a href="https://www.behance.net/sergeikovtun" target="_blank" rel="noopener noreferrer" className="group p-3 rounded-full border border-foreground/10 hover:border-accent hover:text-accent hover:bg-accent/5 transition-all hover:scale-110">
+              <a href="https://www.behance.net/sergeikovtun" target="_blank" rel="noopener noreferrer" aria-label="Visit Sergei Kovtun's Behance profile" className="group p-3 rounded-full border border-foreground/10 hover:border-accent hover:text-accent hover:bg-accent/5 transition-all hover:scale-110">
                 <div className="relative h-4 w-4">
                   <Image
                     src="/images/behance.svg"
-                    alt="Behance"
+                    alt=""
                     fill
                     className="object-contain transition-transform group-hover:scale-110"
+                    aria-hidden="true"
                   />
                 </div>
               </a>
             </div>
 
-            <a href="/UXUI_Product_Designer_Sergei_Kovtun_CV.docx" download="UXUI_Product_Designer_Sergei_Kovtun_CV.docx" className="flex items-center gap-4 px-8 py-3 border border-foreground/10 rounded-full hover:border-accent hover:text-accent hover:bg-accent/5 transition-all group hover:scale-[1.02]">
-              <Download className="h-4 w-4 transition-transform group-hover:-translate-y-[3px]" />
+            <a href="/UXUI_Product_Designer_Sergei_Kovtun_CV.docx" download="UXUI_Product_Designer_Sergei_Kovtun_CV.docx" aria-label="Download Sergei Kovtun's resume" className="flex items-center gap-4 px-8 py-3 border border-foreground/10 rounded-full hover:border-accent hover:text-accent hover:bg-accent/5 transition-all group hover:scale-[1.02]">
+              <Download className="h-4 w-4 transition-transform group-hover:-translate-y-[3px]" aria-hidden="true" />
               <LabelText tracking="widest">Download Resume</LabelText>
             </a>
           </div>

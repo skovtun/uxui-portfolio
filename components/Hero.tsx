@@ -121,8 +121,8 @@ export function Hero() {
                 fill
                 className="object-contain relative z-10 p-4 xl:p-8"
                 priority
-                unoptimized
                 sizes="(max-width: 768px) 340px, (max-width: 1280px) 400px, 550px"
+                quality={85}
               />
               
                 <motion.div 

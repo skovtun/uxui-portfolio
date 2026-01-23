@@ -75,14 +75,14 @@ export function Navbar() {
             </div>
   
                 <div className="flex items-center gap-6">
-                  <a href="/UXUI_Product_Designer_Sergei_Kovtun_CV.docx" download="UXUI_Product_Designer_Sergei_Kovtun_CV.docx">
+                  <a href="/UXUI_Product_Designer_Sergei_Kovtun_CV.docx" download="UXUI_Product_Designer_Sergei_Kovtun_CV.docx" aria-label="Download Sergei Kovtun's resume">
                     <motion.button
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
                       className="group relative px-8 py-3 bg-foreground text-background rounded-full overflow-hidden transition-all hover:scale-[1.02] hidden sm:block"
                     >
                       <div className="relative z-10 flex items-center gap-2">
-                        <Download className="h-3 w-3 transition-transform group-hover:-translate-y-0.5" />
+                        <Download className="h-3 w-3 transition-transform group-hover:-translate-y-0.5" aria-hidden="true" />
                         <span className="text-[10px] font-bold uppercase tracking-widest">Download Resume</span>
                       </div>
                       <div className="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />

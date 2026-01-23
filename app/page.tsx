@@ -37,7 +37,7 @@ function SectionSkeleton() {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="w-full min-h-screen bg-background">
       <Navbar />
       <Hero />
       <Suspense fallback={<SectionSkeleton />}>

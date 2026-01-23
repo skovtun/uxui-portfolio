@@ -34,7 +34,7 @@ export function Section({
     <section
       id={id}
       className={cn(
-        "relative",
+        "relative overflow-x-hidden",
         paddingClasses[padding],
         backgroundClasses[background],
         borderTop && "border-t border-foreground/3",

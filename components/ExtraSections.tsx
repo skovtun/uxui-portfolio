@@ -245,7 +245,7 @@ export function AboutSection() {
     <section id="experience" className="bg-background text-foreground">
       {/* Philosophy & Emphasis */}
         <div className="px-6 md:px-16 py-16 grid grid-cols-1 lg:grid-cols-12 gap-16 relative overflow-hidden">
-          <div className="absolute top-1/2 left-0 w-64 h-64 bg-accent/5 blur-[120px] rounded-full -translate-x-1/2" />
+          <div className="absolute top-1/2 left-0 w-32 h-64 bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
           
           <div className="lg:col-span-6 relative z-10 flex flex-col items-center lg:items-start text-center lg:text-left">
             <motion.div
@@ -438,8 +438,8 @@ export function AboutSection() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="hidden md:flex -left-12" />
-              <CarouselNext className="hidden md:flex -right-12" />
+              <CarouselPrevious className="hidden md:flex left-4" />
+              <CarouselNext className="hidden md:flex right-4" />
             </Carousel>
           </div>
         </Section>
@@ -450,7 +450,7 @@ export function AboutSection() {
 export function Footer() {
   return (
     <footer id="contact" className="px-6 md:px-16 pt-16 pb-4 bg-background text-foreground overflow-hidden relative">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-linear-to-r from-transparent via-foreground/5 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-foreground/5 to-transparent" />
       
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16 items-center">

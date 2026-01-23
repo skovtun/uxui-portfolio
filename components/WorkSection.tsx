@@ -122,7 +122,7 @@ function ProjectCard({ project, index, isLast }: { project: typeof PROJECTS[0], 
               {project.description}
             </p>
 
-            <div className="flex flex-wrap gap-2 mb-4">
+            <div className="flex flex-wrap gap-2 mb-4 justify-center xl:justify-start">
               {project.tags.map((tag) => (
                 <span key={tag} className="px-3 py-1 rounded-full border border-foreground/5 bg-foreground/2 text-[10px] text-foreground/50 font-bold uppercase tracking-wider">
                   {tag}
@@ -155,8 +155,8 @@ export function WorkSection() {
   }, []);
 
   return (
-    <Section id="work" className="relative">
-      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-accent/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
+    <Section id="work" className="relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-accent/5 blur-[120px] rounded-full -translate-y-1/2 pointer-events-none" />
       
       <div className="flex flex-col mb-[72px] md:mb-[96px] relative z-10 items-center xl:items-start text-center xl:text-left">
         <motion.div 

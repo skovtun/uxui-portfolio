@@ -16,7 +16,7 @@ export function Hero() {
     setReducedMotion(prefersReducedMotion());
   }, []);
 
-  const containerVars: Variants = {
+  const getContainerVars = (): Variants => ({
     initial: reducedMotion ? { opacity: 1 } : { opacity: 0 },
     animate: {
       opacity: 1,
@@ -25,9 +25,9 @@ export function Hero() {
         delayChildren: 0.1,
       },
     },
-  };
+  });
 
-  const itemVars: Variants = {
+  const getItemVars = (): Variants => ({
     initial: reducedMotion ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 },
     animate: {
       y: 0,
@@ -37,10 +37,13 @@ export function Hero() {
         ease: "easeOut",
       },
     },
-  };
+  });
+
+  const containerVars = getContainerVars();
+  const itemVars = getItemVars();
 
   return (
-    <section className="relative min-h-screen xl:h-screen flex flex-col px-6 md:px-16 pt-32 md:pt-32 pb-12 xl:pb-0 justify-center bg-background overflow-hidden">
+    <section className="relative w-full min-h-screen xl:h-screen flex flex-col px-6 md:px-16 pt-32 md:pt-32 pb-12 xl:pb-0 justify-center bg-background overflow-hidden">
       <div className="absolute inset-0 bg-linear-to-tr from-accent/5 via-transparent to-accent/5 pointer-events-none" />
       <div className="noise-overlay" />
       
@@ -48,7 +51,7 @@ export function Hero() {
           variants={containerVars}
           initial="initial"
           animate="animate"
-          className="relative z-10 w-full grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-16 items-center max-w-[1600px] mx-auto pt-8 xl:pt-0"
+          className="relative z-10 w-full max-w-[1600px] mx-auto grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-16 items-center pt-8 xl:pt-0"
           style={{ willChange: 'auto' }}
         >
         <div className="xl:col-span-1 py-2 flex flex-col items-center xl:items-start text-center xl:text-left">

@@ -7,39 +7,42 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { SectionHeader, LabelText, Section } from "@/components/shared";
 import { prefersReducedMotion } from "@/lib/motion";
+import { CASE_STUDIES } from "@/lib/projects";
 
-const PROJECTS = [
-  {
-    slug: "empower",
-    title: "Empower",
-    description: "Designed and scaled a unified design system for Empower's corporate website and core financial application. Focused on reusable components, consistent UI patterns, and clear data-heavy interfaces to support complex financial workflows across teams and products.",
-    category: "Design Systems & UI for Financial Platform",
-    image: "/images/projects/empower.png",
-    year: "2025",
-    tags: ["FinTech", "Design Systems", "Dashboards", "Enterprise"],
-    layout: "large" as const
-  },
-  {
-    slug: "1inch",
-    title: "1inch.io",
-    description: "Worked on UX/UI design for a global DeFi platform, focusing on complex swap and transaction flows. Improved clarity, usability, and consistency across key user journeys while balancing advanced functionality with accessibility for experienced crypto users.",
-    category: "UX/UI for DeFi Platform",
-    image: "/images/projects/1inch.png",
-    year: "2023",
-    tags: ["Web3", "DeFi", "Product Design", "Design System"],
-    layout: "small" as const
-  },
-  {
-    slug: "social-platform",
-    title: "GETTR",
-    description: "Designed mobile and web interfaces for GETTR with a focus on scalable UI patterns and user engagement. Worked across core user flows, interaction patterns, and visual consistency to support growth and feature expansion.",
-    category: "Mobile & Web Product Design",
-    image: "/images/projects/gettr.png",
-    year: "2022",
-    tags: ["Product Design", "Mobile", "Design System", "Consumer"],
-    layout: "small" as const
-  }
-];
+// Map case studies to homepage format
+const PROJECTS = CASE_STUDIES.map((project) => {
+  // Map slugs to layout preferences
+  const layoutMap: Record<string, "large" | "small"> = {
+    "empower": "large",
+    "1inch": "small",
+    "social-platform": "small"
+  };
+
+  // Map slugs to descriptions (can be updated if needed)
+  const descriptionMap: Record<string, string> = {
+    "empower": project.overview,
+    "1inch": project.overview,
+    "social-platform": project.overview
+  };
+
+  // Map slugs to categories
+  const categoryMap: Record<string, string> = {
+    "empower": project.subtitle,
+    "1inch": project.subtitle,
+    "social-platform": project.subtitle
+  };
+
+  return {
+    slug: project.slug,
+    title: project.title,
+    description: descriptionMap[project.slug] || project.overview,
+    category: categoryMap[project.slug] || project.subtitle,
+    image: project.image,
+    year: project.year,
+    tags: project.areasOfEmphasis || [],
+    layout: layoutMap[project.slug] || "small" as const
+  };
+});
 
 function ProjectCard({ project, index, isLast }: { project: typeof PROJECTS[0], index: number, isLast?: boolean }) {
   const ref = useRef(null);

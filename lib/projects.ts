@@ -23,7 +23,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     slug: "empower",
     title: "Empower",
     subtitle: "Design System at Scale",
-    year: "2024 — now",
+    year: "2024 — 2025",
     image: "/images/projects/empower.png",
     overview: "I led the design and scaling of a unified design system that became the foundational UI infrastructure for Empower's large-scale financial platform. The system supported multiple product teams and complex financial workflows, enabling consistent user experiences and significantly improving design–engineering efficiency across the organization.",
     context: "Empower is a large-scale financial platform serving millions of users across personal finance, retirement planning, and enterprise retirement products. Prior to this initiative, teams worked with fragmented UI patterns, inconsistent components, and ad-hoc design decisions. As the platform scaled, these inconsistencies increasingly slowed development, created UX debt, and introduced risk into core financial flows.",
@@ -75,60 +75,72 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: "1inch",
-    title: "1inch",
-    subtitle: "Improving DeFi Swap Experience at Scale",
-    year: "2023",
-    image: "/images/projects/1inch.png",
-    overview: "I worked as a Senior Product Designer on the core web dApp of 1inch, a large-scale DeFi aggregator operating across hundreds of liquidity sources and serving millions of users. My work focused on improving complex swap and transaction flows, reducing cognitive load, and increasing user confidence when interacting with advanced DeFi mechanics. In parallel, I contributed to the evolution of the design system, enabling faster iteration and consistent UX across multiple product areas.",
-    context: "1inch is a high-scale DeFi platform aggregating liquidity from hundreds of sources and supporting complex financial interactions such as multi-route swaps, slippage control, gas optimization, and advanced trading modes. As the platform evolved, new features increased product complexity. While these features delivered strong technical value, they also raised the cognitive burden on users and introduced friction in critical transaction flows.",
-    role: "Senior Product Designer",
-    ownership: [
-      "UX optimization for swap and advanced trading flows",
-      "Designing and validating complex user flows with multiple decision points",
-      "Simplifying data-heavy interfaces while preserving transparency",
-      "Collaborating closely with product, engineering, and analytics teams",
-      "Contributing reusable patterns and components to the design system"
-    ],
-    collaboration: [
-      "Product Managers — feature prioritization, user metrics, business impact",
-      "Engineers — technical constraints, implementation patterns, delivery alignment",
-      "Analytics — user behavior analysis, drop-off points, conversion metrics"
-    ],
-    problem: "Analysis of product behavior and internal feedback highlighted several issues: high cognitive load during swap configuration and confirmation, users frequently abandoned advanced swap modes or reverted to simpler flows, complex parameters (rates, presets, advanced settings) were difficult to scan and interpret, inconsistent UX patterns across features increased hesitation and reduced confidence. These issues directly affected conversion, retention, and trust in core DeFi interactions.",
-    keyIssues: [
-      "High cognitive load during swap configuration and confirmation",
-      "Users frequently abandoned advanced swap modes or reverted to simpler flows",
-      "Complex parameters (rates, presets, advanced settings) were difficult to scan and interpret",
-      "Inconsistent UX patterns across features increased hesitation and reduced confidence"
-    ],
-    solution: "I redesigned key parts of the swap experience with a focus on clarity, predictability, and progressive disclosure. The goal was not to hide complexity, but to surface the right information at the right moment and guide users through decision-heavy flows with confidence. All changes were implemented within the existing design system, ensuring consistency across products and scalability for future features.",
-    approach: [
-      "Analyzed user behavior and drop-off points in swap flows",
-      "Reviewed internal analytics and qualitative feedback",
-      "Identified moments of hesitation, confusion, and loss of confidence",
-      "Simplified data presentation for critical values (rates, receive amounts, impact)",
-      "Introduced clearer visual hierarchy and scan patterns",
-      "Applied progressive disclosure to advanced settings",
-      "Reduced visual noise while preserving decision transparency",
-      "Conducted usability reviews and internal feedback sessions",
-      "Standardized components used in swap and transaction flows",
-      "Aligned interaction patterns across product areas"
-    ],
-    impact: [
-      "Users were less likely to abandon advanced swap flows",
-      "Confidence and clarity during transaction configuration improved",
-      "UX friction caused by complex parameters was significantly reduced",
-      "Teams were able to iterate faster using standardized components",
-      "All improvements were validated through product analytics, internal reviews, and qualitative feedback"
-    ],
-    reflection: "Designing for DeFi requires balancing transparency, security, and efficiency. Users must understand what is happening, trust the system, and complete transactions with confidence — often under conditions where mistakes are costly. This project reinforced the importance of progressive disclosure, strong visual hierarchy, and predictable interaction patterns when designing for technically complex domains.",
-    areasOfEmphasis: [
-      "DeFi",
-      "Product Design",
-      "Design System",
-      "Web3"
-    ]
-  },
+title: "1inch",
+subtitle: "Improving DeFi Swap Experience at Scale",
+year: "2023",
+image: "/images/projects/1inch.png",
+
+overview: "I worked as a Senior Product Designer on the core 1inch web dApp — a large-scale DeFi aggregator operating across hundreds of liquidity sources and serving millions of users. My focus was improving critical swap and transaction flows in a high-risk, data-dense environment, while contributing reusable patterns to a scalable design system adopted across multiple product surfaces.",
+
+context: "1inch is a high-scale DeFi platform that aggregates liquidity from hundreds of sources and supports complex financial interactions such as multi-route swaps, slippage control, gas optimization, and advanced trading modes. As the platform evolved, new features increased functional power but also significantly raised cognitive load and decision complexity for users, especially during high-stakes transaction flows.",
+
+role: "Senior Product Designer",
+
+ownership: [
+  "End-to-end UX optimization for core swap and advanced trading flows",
+  "Designing and validating complex user journeys with multiple decision points",
+  "Simplifying data-heavy interfaces while preserving transparency and trust",
+  "Collaborating closely with product, engineering, and analytics teams",
+  "Contributing reusable components and interaction patterns to the design system"
+],
+
+collaboration: [
+  "Product Managers — defining problem scope, prioritization, and success criteria",
+  "Engineers — aligning UX decisions with technical constraints and implementation realities",
+  "Analytics — analyzing user behavior, drop-off points, and conversion patterns"
+],
+
+problem: "Product analysis and internal feedback revealed several systemic UX issues impacting core swap interactions. Users experienced high cognitive load during configuration and confirmation, frequently abandoned advanced trading modes, and struggled to interpret dense financial parameters. Inconsistent interaction patterns across features further reduced confidence in critical, high-risk transactions.",
+
+keyIssues: [
+  "High cognitive load during swap configuration and confirmation",
+  "Frequent abandonment of advanced swap modes in favor of simpler flows",
+  "Poor scannability of complex parameters such as rates, presets, and advanced settings",
+  "Inconsistent UX patterns across features reducing predictability and trust"
+],
+
+solution: "I redesigned key parts of the swap experience with a focus on clarity, predictability, and progressive disclosure. The goal was not to remove complexity, but to structure it — surfacing the right information at the right moment and guiding users through decision-heavy flows with confidence. All improvements were implemented within the existing design system to ensure consistency and long-term scalability.",
+
+approach: [
+  "Analyzed user behavior and drop-off points across swap and confirmation flows",
+  "Reviewed internal analytics and qualitative feedback from product and support teams",
+  "Identified moments of hesitation, confusion, and loss of user confidence",
+  "Reworked information hierarchy for critical values such as rates, receive amounts, and price impact",
+  "Introduced clearer visual grouping and scan patterns for dense financial data",
+  "Applied progressive disclosure to advanced settings and secondary parameters",
+  "Reduced visual noise while preserving transparency and decision context",
+  "Conducted usability reviews and internal feedback sessions",
+  "Standardized components and interaction patterns across swap-related features",
+  "Aligned UX patterns across multiple product areas using the design system"
+],
+
+impact: [
+  "Users were less likely to abandon advanced swap flows",
+  "Confidence and clarity during transaction configuration improved",
+  "UX friction caused by complex financial parameters was reduced",
+  "Teams iterated faster using standardized components and patterns",
+  "Improvements were validated through product analytics, internal reviews, and qualitative feedback"
+],
+
+reflection: "This project reinforced that in high-risk, data-dense systems like DeFi products, clarity and predictability are not aesthetic choices but functional requirements. Progressive disclosure and consistent interaction patterns play a critical role in building trust, reducing hesitation, and supporting confident decision-making.",
+
+areasOfEmphasis: [
+  "DeFi",
+  "Product Design",
+  "Design Systems",
+  "Web3"
+]
+},
   {
     slug: "social-platform",
     title: "GETTR",

@@ -25,7 +25,7 @@ export function TagList({
         <div
           key={tag}
           className={cn(
-            "px-6 py-4 rounded-full bg-foreground/[0.02] border border-foreground/5 text-[10px] font-bold uppercase tracking-widest cursor-default",
+            "px-6 py-4 rounded-full bg-foreground/2 border border-foreground/5 text-[10px] font-bold uppercase tracking-widest cursor-default",
             tagClassName
           )}
         >

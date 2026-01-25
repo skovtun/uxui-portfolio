@@ -99,7 +99,6 @@ const BRANDS = [
   { name: "ADP", logo: "/images/logos/adp.svg" },
   { name: "Kaiser Permanente", logo: "/images/logos/kaiser-permanente.svg" },
   { name: "Odos", logo: "/images/logos/odos.svg" },
-  { name: "Gazprom", logo: "/images/logos/gazprom.svg" },
   { name: "Gigabyte", logo: "/images/logos/gigabyte.svg" },
   { name: "Gettr", logo: "/images/logos/gettr.svg" }
 ];
